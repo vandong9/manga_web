@@ -1,0 +1,26 @@
+.page-header {
+    display: flex;
+    height: 56px;
+}
+.hamberger-full {
+    width: 240px;
+    padding: 0 24px;
+}
+
+.hamberger-zip {
+    width: 72px;
+}
+
+.search {
+    display: flex;
+    align-items: center;
+}
+
+.right-section {
+    display: flex;
+}
+
+.search-icon {
+    width: 24px;
+    height: 24px;
+}

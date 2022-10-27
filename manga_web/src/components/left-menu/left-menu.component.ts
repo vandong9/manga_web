@@ -1,10 +1,14 @@
-import { Component } from "@angular/core";
+import { Component, OnInit } from "@angular/core";
 
 @Component({
-    selector: 'Left-menu',
-    templateUrl:'left-menu.component.html',
+    selector: 'left-menu',
+    templateUrl: 'left-menu.component.html',
     styleUrls: ['left-menu.component.css']
 })
+
+class LeftMenuComponent {
+    sections: MenuSection[] = []
+}
 
 interface MenuItem {
     name: String
@@ -16,8 +20,8 @@ interface MenuSection {
     items: MenuItem[]
 }
 
-class LeftMenuComponent {
 
+class HambergerButton {
+    
 }
-
 export {LeftMenuComponent}
