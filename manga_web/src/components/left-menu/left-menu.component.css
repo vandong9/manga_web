@@ -1,6 +1,12 @@
 .left-menu {
-    height: 56px;
+    width: 240px;
     padding: 0 16px;
-    display: flex;
+    display: block;
 }
 
+.left-meu-item {
+    height: 40px;
+    display: flex;
+    align-items: center;
+    fill: white;
+}
