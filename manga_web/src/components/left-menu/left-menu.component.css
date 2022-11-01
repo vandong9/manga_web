@@ -10,3 +10,9 @@
     align-items: center;
     fill: white;
 }
+
+.expanded-item-icon {
+    width: 24px; 
+    height: 24px; 
+    margin-right: 24px;
+}
