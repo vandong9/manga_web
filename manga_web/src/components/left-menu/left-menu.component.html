@@ -3,9 +3,9 @@
     <div style="border-top: 1px solid; border-color: #ffffff11;">
     <h2 [hidden]="section.name.length == 0">{{ section.name }}</h2>
     <ng-container *ngFor="let item of section.items">
-        <div class="left-meu-item" ngclick>
+       <div [ngClass]="item.id == selectedItemID ? 'left-meu-item-selected' : 'left-meu-item'"  (click)="onSelectedItem(item.id)">
             <div class="expanded-item-icon">
-                <svg viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet" focusable="false" class="style-scope yt-icon" style="pointer-events: none; display: block; width: 100%; height: 100%;"><g class="style-scope yt-icon"><path [attr.d]="item.iconSVGPath" class="style-scope yt-icon"></path></g></svg>
+                <svg viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet" focusable="false" class="style-scope yt-icon" style="pointer-events: none; display: block; width: 100%; height: 100%;"><g class="style-scope yt-icon"><path [attr.d]="item.id == selectedItemID ? item.iconActiveSVGPath : item.iconSVGPath" class="style-scope yt-icon"></path></g></svg>
             </div>
             {{ item.name }}
         </div>
