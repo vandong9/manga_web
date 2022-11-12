@@ -7,4 +7,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'manga_web';
+
+  toggle: Boolean = false
+  listenToggleHambegerEmit(event: any) {
+    console.log(event)
+    this.toggle = !this.toggle
+  }
 }

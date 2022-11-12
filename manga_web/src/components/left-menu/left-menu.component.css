@@ -4,6 +4,10 @@
     display: block;
 }
 
+.left-menu-minimize {
+    width: 50px;
+}
+
 .left-meu-item {
     height: 40px;
     display: flex;

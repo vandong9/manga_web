@@ -38,26 +38,37 @@
   }
   #header {
     height: 56px;
-    padding: 0 16px;
+    padding: 0px;
   }
   #body {
     display: flex;
     background: #181818;
     color: white;
   }
+
+  #app {
+    background: #181818;
+    color: white;
+    height: 100vh;
+    padding: 0;
+  }
 </style>
 
 <!--  Header -->
-<div id="header"><page-header></page-header></div>
-<div id="body">
-<div>
-  <left-menu></left-menu>
-</div>
 
-<div>
-  <app-product-detail></app-product-detail>
-  <product-list></product-list>
-</div>
+<div id="app">
+  <div id="header"><page-header (onClickHambegerEmitter)="listenToggleHambegerEmit($event)"></page-header></div>
+
+  <div id="body">
+    <div>
+      <left-menu [haveChange]="toggle"></left-menu>
+    </div>
+
+    <div>
+      <app-product-detail></app-product-detail>
+      <product-list></product-list>
+    </div>
+  </div>
 </div>
 
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
