@@ -1,4 +1,5 @@
-import { Component, OnInit, OnChanges, SimpleChanges  } from "@angular/core";
+import { CUSTOM_ELEMENTS_SCHEMA } from "@angular/compiler";
+import { Component, OnInit, OnChanges, SimpleChanges, NgModule  } from "@angular/core";
 import { EventEmitter, Input } from "@angular/core";
 
 @Component({
@@ -79,6 +80,5 @@ export enum LeftMenuMode {
     minimize,
     maximixe
 }
-
 
 // export{LeftMenuComponent};
