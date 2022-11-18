@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 
 import { LeftMenuComponent } from '../../components/left-menu/left-menu.component';
 import { HeaderComponent } from '../../components/header/header.component';
+import { ListVideoComponent } from '../../components/list-video/list-video.component';
 
 @Component({
   selector: 'home-module',
@@ -18,7 +19,12 @@ export class HomePageComponent {
 
 @NgModule({
   imports: [CommonModule],
-  declarations: [HomePageComponent, HeaderComponent, LeftMenuComponent],
+  declarations: [
+    HomePageComponent,
+    HeaderComponent,
+    LeftMenuComponent,
+    ListVideoComponent,
+  ],
   exports: [HomePageComponent],
   bootstrap: [HomePageComponent],
 })
