@@ -4,6 +4,7 @@ import { CommonModule } from '@angular/common';
 import { LeftMenuComponent } from '../../components/left-menu/left-menu.component';
 import { HeaderComponent } from '../../components/header/header.component';
 import { ListVideoComponent } from '../../components/list-video/list-video.component';
+import { CardVideoComponent } from '../../components/list-video/card-video.component';
 
 @Component({
   selector: 'home-module',
@@ -24,6 +25,7 @@ export class HomePageComponent {
     HeaderComponent,
     LeftMenuComponent,
     ListVideoComponent,
+    CardVideoComponent,
   ],
   exports: [HomePageComponent],
   bootstrap: [HomePageComponent],
