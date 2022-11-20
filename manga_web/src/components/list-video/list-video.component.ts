@@ -1,16 +1,31 @@
 import { Component } from '@angular/core';
 import { VideoLinkItem } from '../list-video/video-link-item';
 import { CardVideoComponent } from '../list-video/card-video.component';
+import { VideoService } from 'src/services/video.service';
 
 @Component({
   selector: 'list-video',
   template: `
-    <ng-container *ngFor="let clip of videoLinks">
-      <card-video [videoLink]="clip"></card-video>
-    </ng-container>
+    <style>
+      .list-video {
+        display: flex;
+      }
+    </style>
+    <div class="list-video">
+      <ng-container *ngFor="let clip of videoLinks">
+        <card-video [videoLink]="clip"></card-video>
+      </ng-container>
+    </div>
   `,
+  providers: [VideoService],
 })
 export class ListVideoComponent {
+  constructor(private videoService: VideoService) {
+    videoService.getAll().subscribe((videos) => {
+      this.videoLinks = this.videoLinks.concat(videos);
+    });
+  }
+
   videoLinks: VideoLinkItem[] = [
     {
       image:

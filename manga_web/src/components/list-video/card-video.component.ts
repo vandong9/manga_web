@@ -7,6 +7,7 @@ import { VideoLinkItem } from '../list-video/video-link-item';
     <style>
       .card-video {
         width: 300px;
+        padding: 8px;
       }
       .card-image {
         padding: 8px 0px;
