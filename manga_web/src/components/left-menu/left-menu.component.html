@@ -49,9 +49,9 @@
           </div>
         </ng-container>
         <div [hidden]="subscriptions.length <= 0">
-          <ng-container *ngIF="currentLeftMenuMode != LeftMenuMode.minimiz">
-            <div>Subscriptions</div>
-          </ng-container>
+          <div [hidden]="currentLeftMenuMode != LeftMenuMode.minimize">
+            Subscriptions
+          </div>
 
           <ng-container *ngFor="let item of subscriptions">
             <div
@@ -65,9 +65,9 @@
               <div class="expanded-item-icon">
                 <img href="item.image" />
               </div>
-              <ng-container *ngIF="currentLeftMenuMode != LeftMenuMode.minimiz">
+              <div [hidden]="currentLeftMenuMode != LeftMenuMode.minimize">
                 {{ item.name }}
-              </ng-container>
+              </div>
             </div>
           </ng-container>
         </div>
