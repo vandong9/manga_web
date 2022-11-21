@@ -1,4 +1,4 @@
-import { VideoLinkItem } from 'src/components/list-video/video-link-item';
+import { VideoLinkItem } from 'src/models/video-link-item';
 import { Injectable } from '@angular/core';
 import { Logger } from './logger.service';
 import { Observable, of, Subject } from 'rxjs';

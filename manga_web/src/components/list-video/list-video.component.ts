@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { VideoLinkItem } from '../list-video/video-link-item';
+import { VideoLinkItem } from '../../models/video-link-item';
 import { CardVideoComponent } from '../list-video/card-video.component';
 import { VideoService } from 'src/services/video.service';
 

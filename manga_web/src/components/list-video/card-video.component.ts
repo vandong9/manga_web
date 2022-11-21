@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { VideoLinkItem } from '../list-video/video-link-item';
+import { VideoLinkItem } from '../../models/video-link-item';
 
 @Component({
   selector: 'card-video',
