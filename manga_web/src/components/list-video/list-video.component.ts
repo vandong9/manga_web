@@ -11,9 +11,13 @@ import { VideoService } from 'src/services/video.service';
         display: flex;
       }
     </style>
-    <div class="list-video">
+    <div
+      class="mt-6 grid grid-cols-1 gap-y-10 gap-x-6 sm:grid-cols-2 lg:grid-cols-5 xl:gap-x-8"
+    >
       <ng-container *ngFor="let clip of videoLinks">
-        <card-video [videoLink]="clip"></card-video>
+        <div class="group relative">
+          <card-video [videoLink]="clip"></card-video>
+        </div>
       </ng-container>
     </div>
   `,

@@ -11,6 +11,9 @@ import { VideoLinkItem } from '../../models/video-link-item';
       }
       .card-image {
         padding: 8px 0px;
+        height: 180px;
+        margin-left: auto;
+        margin-right: auto;
       }
       .card-channel-avatar {
         padding: 0px 8px;
@@ -20,12 +23,9 @@ import { VideoLinkItem } from '../../models/video-link-item';
       }
     </style>
     <div class="card-video">
-      <img
-        src="{{ videoLink.image }}"
-        width="300px"
-        height="180px"
-        class="card-image"
-      />
+      <a href="/video"
+        ><img src="{{ videoLink.image }}" class="card-image"
+      /></a>
       <div style="display: flex;">
         <img
           src="{{ videoLink.channelAvatar }}"

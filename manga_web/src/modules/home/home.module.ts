@@ -5,7 +5,7 @@ import { LeftMenuComponent } from '../../components/left-menu/left-menu.componen
 import { HeaderComponent } from '../../components/header/header.component';
 import { ListVideoComponent } from '../../components/list-video/list-video.component';
 import { CardVideoComponent } from '../../components/list-video/card-video.component';
-import { HttpErrorHandler } from 'src/services/error-handler.service';
+import { SharedModule } from '../shared/shared.module';
 
 @Component({
   selector: 'home-module',
@@ -20,11 +20,10 @@ export class HomePageComponent {
 }
 
 @NgModule({
-  imports: [CommonModule],
+  imports: [CommonModule, SharedModule],
   declarations: [
     HomePageComponent,
     HeaderComponent,
-    LeftMenuComponent,
     ListVideoComponent,
     CardVideoComponent,
   ],
