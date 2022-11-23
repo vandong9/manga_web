@@ -23,9 +23,7 @@ import { VideoLinkItem } from '../../models/video-link-item';
       }
     </style>
     <div class="card-video">
-      <a href="/video"
-        ><img src="{{ videoLink.image }}" class="card-image"
-      /></a>
+      <a href="video"><img src="{{ videoLink.image }}" class="card-image" /></a>
       <div style="display: flex;">
         <img
           src="{{ videoLink.channelAvatar }}"

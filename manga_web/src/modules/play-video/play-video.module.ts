@@ -1,6 +1,11 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import {
+  RelativeVideoCell,
+  RelativeVideoComponent,
+} from 'src/components/relative-video/relative-video.component';
+import { VideoPlayerComponent } from 'src/components/video-player/video-player.component';
 import { SharedModule } from '../shared/shared.module';
 import { PlayVideoPage } from './play-video.page';
 
@@ -14,7 +19,12 @@ export class PlayVideoRoutingModule {}
 
 @NgModule({
   imports: [CommonModule, PlayVideoRoutingModule, SharedModule],
-  declarations: [PlayVideoPage],
+  declarations: [
+    PlayVideoPage,
+    VideoPlayerComponent,
+    RelativeVideoComponent,
+    RelativeVideoCell,
+  ],
   exports: [PlayVideoPage],
   bootstrap: [PlayVideoPage],
 })

@@ -21,12 +21,7 @@ export class HomePageComponent {
 
 @NgModule({
   imports: [CommonModule, SharedModule],
-  declarations: [
-    HomePageComponent,
-    HeaderComponent,
-    ListVideoComponent,
-    CardVideoComponent,
-  ],
+  declarations: [HomePageComponent, ListVideoComponent, CardVideoComponent],
   // providers: [HttpErrorHandler],
   exports: [HomePageComponent],
   bootstrap: [HomePageComponent],

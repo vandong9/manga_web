@@ -18,6 +18,20 @@ export class VideoService {
     this.handleError = httpErrorHandler.createHandleError('HeroesService');
   }
   allVideosLink = '';
+  relateVideoLink = '';
+
+  getRelativeVideo(): Observable<VideoLinkItem[]> {
+    var observer = new Observable<VideoLinkItem[]>((subscriber) => {
+      this.http.get('assets/mock/all-video.json').subscribe((data) => {
+        let jsonString = JSON.stringify(data);
+        var videos: Array<VideoLinkItem> = JSON.parse(jsonString);
+        subscriber.next(videos);
+        subscriber.complete();
+      });
+    });
+
+    return observer;
+  }
   getAll(): Observable<VideoLinkItem[]> {
     var observer = new Observable<VideoLinkItem[]>((subscriber) => {
       this.http.get('assets/mock/all-video.json').subscribe((data) => {
