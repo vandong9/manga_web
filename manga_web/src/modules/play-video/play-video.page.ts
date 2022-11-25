@@ -1,16 +1,28 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { VideoLinkItem } from 'src/models/video-link-item';
+import { VideoService } from 'src/services/video.service';
 
 @Component({
   selector: 'play-video-page',
   templateUrl: 'play-video.page.html',
 })
-export class PlayVideoPage {
+export class PlayVideoPage implements OnInit {
   toggle: Boolean = false;
+  relativeVideos: VideoLinkItem[] = [];
+  videoID: String = ""
+
+  constructor(private videoService: VideoService){}
+  ngOnInit(): void {
+    
+    this.videoService.getRelativeVideo().subscribe((videos)=> {
+      this.relativeVideos = this.relativeVideos.concat(videos)
+    })
+  }
+
+  
   listenToggleHambegerEmit(event: any) {
     console.log(event);
     this.toggle = !this.toggle;
   }
 
-  relativeVideos: VideoLinkItem[] = [];
 }

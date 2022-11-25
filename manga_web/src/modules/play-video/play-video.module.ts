@@ -1,6 +1,8 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { CommentItemComponent } from 'src/components/comments/comment-item.component';
+import { ListCommentComponent } from 'src/components/comments/list-comment.component';
 import {
   RelativeVideoCell,
   RelativeVideoComponent,
@@ -24,6 +26,8 @@ export class PlayVideoRoutingModule {}
     VideoPlayerComponent,
     RelativeVideoComponent,
     RelativeVideoCell,
+    ListCommentComponent,
+    CommentItemComponent
   ],
   exports: [PlayVideoPage],
   bootstrap: [PlayVideoPage],

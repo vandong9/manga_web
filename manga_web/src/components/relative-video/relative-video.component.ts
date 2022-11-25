@@ -32,7 +32,9 @@ export class RelativeVideoComponent {
       style="height: 94px;"
     />
     <div>
+      <div>
       {{ relativeVideo.title }}
+      </div>
       {{ relativeVideo.channelName }}
       <div style="display: flex;">
         {{ relativeVideo.viewCount }}

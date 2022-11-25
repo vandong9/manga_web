@@ -11,5 +11,34 @@
   ></iframe>
 </div>
 
-<!-- src="{{ link }}"  -->
-<div></div>
+<!-- video info -->
+<div>
+  {{ videoDetail.name }}
+  <div>
+    <div>
+      <img src="{{ videoDetail.channelModel.avatar }}" />
+      {{ videoDetail.channelModel.name }}
+      {{ videoDetail.channelModel.subcribers }}
+      <button value="Subscribe"></button>
+    </div>
+    <div>
+      <div>
+        <button value="">{{ videoDetail.likes }}</button>
+        <button value="">Share</button>
+        <button value="">Clip</button>
+        <button value="">Save</button>
+        <button value="">More</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Description -->
+<div>
+  {{ videoDetail.description}}
+</div>
+
+<!-- Comments -->
+<div>
+  
+</div>
