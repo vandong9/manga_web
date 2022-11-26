@@ -1,8 +1,6 @@
 import { Component, NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
-import { LeftMenuComponent } from '../../components/left-menu/left-menu.component';
-import { HeaderComponent } from '../../components/header/header.component';
 import { ListVideoComponent } from '../../components/list-video/list-video.component';
 import { CardVideoComponent } from '../../components/list-video/card-video.component';
 import { SharedModule } from '../shared/shared.module';
