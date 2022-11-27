@@ -1,6 +1,6 @@
 <style>
   .short-player {
-    width: 300px;
+    width: 420px;
     height: 90%;
     background-color: aqua;
   }
@@ -11,9 +11,9 @@
     top: 0;
     background-color: blue;
   }
-  .short-player > player {
+  .short-player-player {
     width: 100%;
-    height: 590px;
+    height: 100%;
     left: 0px;
     top: 84px;
   }
@@ -24,10 +24,49 @@
     width: 100%;
     background-color: gray;
   }
-</style>
+  .short-player-tool_container {
+    width: 72px;
+    height: 90%;
+    align-items: center;
+    position: relative;
 
-<div class="short-player">
-  <div class="header"></div>
-  <div class="player"></div>
-  <div class="bottom"></div>
+  }
+
+  .short-player-tool-item {
+    width: 72px;
+    height: 72px;
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+    background-color: brown;
+    margin: 8px;
+    border-radius: 50%;
+
+  }
+</style>
+<div style="display: flex; height: 100%; justify-content: center">
+  <div class="short-player">
+    <div class="header"></div>
+    <div class="short-player-player">
+      <iframe
+        width="100%"
+        height="100%"
+        src="https://www.youtube.com/embed/AX0d2_iGfpE"
+        title="YouTube video player"
+        frameborder="0"
+        allow="accelerometer; autoplay; cdivpboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen
+      ></iframe>
+    </div>
+    <div class="bottom"></div>
+  </div>
+  <div class="short-player-tool_container">
+    <div style="position: absolute; bottom: 0px;">
+      <div class="short-player-tool-item"><button>like</button></div>
+      <div class="short-player-tool-item"><button>dislike</button></div>
+      <div class="short-player-tool-item"><button>comment</button></div>
+      <div class="short-player-tool-item"><button>share</button></div>
+    </div>
+  </div>
 </div>
