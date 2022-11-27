@@ -36,6 +36,14 @@ export class ListVideoComponent {
       image:
         'https://i.ytimg.com/vi/4QKKW31ONBU/hq720_2.jpg?sqp=-oaymwEdCJYDENAFSFXyq4qpAw8IARUAAIhCcAHAAQbQAQE=&rs=AOn4CLAAUjkf69Qqz72-ULn67OrZpa_3RA',
       title: 'Biggest elephant in the world #elephants #elephantattack',
+      channel: {
+        id: '123456',
+        name: 'BleSsed Anime',
+        avatar:
+          'https://yt3.ggpht.com/ytc/AMLnZu8Nj1KW5Ws7bL1iuVMwt6SVAntdkLqgdTPb5bdK=s68-c-k-c0x00ffffff-no-rj',
+        subcribers: '',
+        subcriberscount: 123456,
+      },
       channelName: 'BleSsed Anime',
       channelAvatar:
         'https://yt3.ggpht.com/ytc/AMLnZu8Nj1KW5Ws7bL1iuVMwt6SVAntdkLqgdTPb5bdK=s68-c-k-c0x00ffffff-no-rj',

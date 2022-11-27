@@ -9,10 +9,17 @@ import {
   HttpErrorHandler,
   MessageService,
 } from 'src/services/error-handler.service';
+import { ChannelModule } from 'src/modules/channel/channel.module';
 
 @NgModule({
   declarations: [AppComponent],
-  imports: [BrowserModule, HttpClientModule, AppRoutingModule, HomeModule],
+  imports: [
+    BrowserModule,
+    HttpClientModule,
+    AppRoutingModule,
+    HomeModule,
+    ChannelModule,
+  ],
   providers: [HttpErrorHandler, MessageService],
   bootstrap: [AppComponent],
 })

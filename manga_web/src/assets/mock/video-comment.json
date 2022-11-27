@@ -1,159 +1,173 @@
 [
-    {
-        "id": "aaa111",
-        "level": 0,
-        "ownerID": "aaaa2222",
-        "ownerName": "KKBOX 華語單曲",
-        "ownerAvatar":"https://yt3.ggpht.com/8gDo56CtvBhnZMMDY7LtnOHlEDnGLyTLiHPcwiRK_4UAn37U-ZP-C4Zw0mB6ij8vKIXTYlsGjQ=s88-c-k-c0x00ffffff-no-rj",
-        "comment": "好蘋道你們怎麼又沒有在幫我找大壯照片他的歌呢，你們要等都久才能看到聽到呢，怎麼一點消息都沒有呢，我看過你們蘋道沒有大壯照片可以欣賞的，都是海來阿木而已🤔😟😔🧐",
-        "postDate": "1 month ago",
-        "likes": "1",
-        "disLikes": "",
-        "replies":[
-            {
-                "id": "aaa111",
-                "level": 1,
-                "ownerID": "aaaa2222",
-                "ownerName": "KKBOX 華語單曲",
-                "ownerAvatar":"https://yt3.ggpht.com/ByCFRgCO1wUiePTWszAfGFl-BxSoy1dSG9cA73vcex3hjdvbJMG9OWVjCdSFHQ4-mFrjphCOMRA=s48-c-k-c0x00ffffff-no-rj",
-                "comment": "好蘋道你們怎麼又沒有在幫我找大壯照片他的歌呢，你們要等都久才能看到聽到呢，怎麼一點消息都沒有呢，我看過你們蘋道沒有大壯照片可以欣賞的，都是海來阿木而已🤔😟😔🧐",
-                "postDate": "1 month ago",
-                "likes": "1",
-                "disLikes": "",
-                "replies": []
-            },
-            {
-                "id": "aaa111",
-                "level": 1,
-                "ownerID": "aaaa2222",
-                "ownerName": "KKBOX 華語單曲",
-                "ownerAvatar":"https://yt3.ggpht.com/ByCFRgCO1wUiePTWszAfGFl-BxSoy1dSG9cA73vcex3hjdvbJMG9OWVjCdSFHQ4-mFrjphCOMRA=s48-c-k-c0x00ffffff-no-rj",
-                "comment": "好蘋道你們怎麼又沒有在幫我找大壯照片他的歌呢，你們要等都久才能看到聽到呢，怎麼一點消息都沒有呢，我看過你們蘋道沒有大壯照片可以欣賞的，都是海來阿木而已🤔😟😔🧐",
-                "postDate": "1 month ago",
-                "likes": "1",
-                "disLikes": "",
-                "replies": []
-            },
-            {
-                "id": "aaa111",
-                "level": 1,
-                "ownerID": "aaaa2222",
-                "ownerName": "KKBOX 華語單曲",
-                "ownerAvatar":"https://yt3.ggpht.com/ByCFRgCO1wUiePTWszAfGFl-BxSoy1dSG9cA73vcex3hjdvbJMG9OWVjCdSFHQ4-mFrjphCOMRA=s48-c-k-c0x00ffffff-no-rj",
-                "comment": "好蘋道你們怎麼又沒有在幫我找大壯照片他的歌呢，你們要等都久才能看到聽到呢，怎麼一點消息都沒有呢，我看過你們蘋道沒有大壯照片可以欣賞的，都是海來阿木而已🤔😟😔🧐",
-                "postDate": "1 month ago",
-                "likes": "1",
-                "disLikes": "",
-                "replies": []
-            }
-        ]
+  {
+    "id": "aaa111",
+    "level": 0,
+    "ownerID": "aaaa2222",
+    "channel": {
+      "id": "123456",
+      "name": "KKBOX 華語單曲",
+      "avatar": "https://yt3.ggpht.com/8gDo56CtvBhnZMMDY7LtnOHlEDnGLyTLiHPcwiRK_4UAn37U-ZP-C4Zw0mB6ij8vKIXTYlsGjQ=s88-c-k-c0x00ffffff-no-rj",
+      "subcriberscount": 0,
+      "subcribers": "12k"
     },
-    {
+    "ownerName": "KKBOX 華語單曲",
+    "ownerAvatar": "https://yt3.ggpht.com/8gDo56CtvBhnZMMDY7LtnOHlEDnGLyTLiHPcwiRK_4UAn37U-ZP-C4Zw0mB6ij8vKIXTYlsGjQ=s88-c-k-c0x00ffffff-no-rj",
+    "comment": "好蘋道你們怎麼又沒有在幫我找大壯照片他的歌呢，你們要等都久才能看到聽到呢，怎麼一點消息都沒有呢，我看過你們蘋道沒有大壯照片可以欣賞的，都是海來阿木而已🤔😟😔🧐",
+    "postDate": "1 month ago",
+    "likes": "1",
+    "disLikes": "",
+    "replies": [
+      {
         "id": "aaa111",
-        "level": 0,
+        "level": 1,
+        "channel": {
+          "id": "123456",
+          "name": "KKBOX 華語單曲",
+          "avatar": "https://yt3.ggpht.com/8gDo56CtvBhnZMMDY7LtnOHlEDnGLyTLiHPcwiRK_4UAn37U-ZP-C4Zw0mB6ij8vKIXTYlsGjQ=s88-c-k-c0x00ffffff-no-rj",
+          "subcriberscount": 0,
+          "subcribers": "12k"
+        },
         "ownerID": "aaaa2222",
         "ownerName": "KKBOX 華語單曲",
-        "ownerAvatar":"https://yt3.ggpht.com/8gDo56CtvBhnZMMDY7LtnOHlEDnGLyTLiHPcwiRK_4UAn37U-ZP-C4Zw0mB6ij8vKIXTYlsGjQ=s88-c-k-c0x00ffffff-no-rj",
+        "ownerAvatar": "https://yt3.ggpht.com/ByCFRgCO1wUiePTWszAfGFl-BxSoy1dSG9cA73vcex3hjdvbJMG9OWVjCdSFHQ4-mFrjphCOMRA=s48-c-k-c0x00ffffff-no-rj",
         "comment": "好蘋道你們怎麼又沒有在幫我找大壯照片他的歌呢，你們要等都久才能看到聽到呢，怎麼一點消息都沒有呢，我看過你們蘋道沒有大壯照片可以欣賞的，都是海來阿木而已🤔😟😔🧐",
         "postDate": "1 month ago",
         "likes": "1",
         "disLikes": "",
         "replies": []
-    },
-    {
+      },
+      {
         "id": "aaa111",
-        "level": 0,
+        "level": 1,
         "ownerID": "aaaa2222",
         "ownerName": "KKBOX 華語單曲",
-        "ownerAvatar":"https://yt3.ggpht.com/8gDo56CtvBhnZMMDY7LtnOHlEDnGLyTLiHPcwiRK_4UAn37U-ZP-C4Zw0mB6ij8vKIXTYlsGjQ=s88-c-k-c0x00ffffff-no-rj",
+        "ownerAvatar": "https://yt3.ggpht.com/ByCFRgCO1wUiePTWszAfGFl-BxSoy1dSG9cA73vcex3hjdvbJMG9OWVjCdSFHQ4-mFrjphCOMRA=s48-c-k-c0x00ffffff-no-rj",
         "comment": "好蘋道你們怎麼又沒有在幫我找大壯照片他的歌呢，你們要等都久才能看到聽到呢，怎麼一點消息都沒有呢，我看過你們蘋道沒有大壯照片可以欣賞的，都是海來阿木而已🤔😟😔🧐",
         "postDate": "1 month ago",
         "likes": "1",
         "disLikes": "",
         "replies": []
-    },
-    {
+      },
+      {
         "id": "aaa111",
-        "level": 0,
+        "level": 1,
         "ownerID": "aaaa2222",
         "ownerName": "KKBOX 華語單曲",
-        "ownerAvatar":"https://yt3.ggpht.com/8gDo56CtvBhnZMMDY7LtnOHlEDnGLyTLiHPcwiRK_4UAn37U-ZP-C4Zw0mB6ij8vKIXTYlsGjQ=s88-c-k-c0x00ffffff-no-rj",
+        "ownerAvatar": "https://yt3.ggpht.com/ByCFRgCO1wUiePTWszAfGFl-BxSoy1dSG9cA73vcex3hjdvbJMG9OWVjCdSFHQ4-mFrjphCOMRA=s48-c-k-c0x00ffffff-no-rj",
         "comment": "好蘋道你們怎麼又沒有在幫我找大壯照片他的歌呢，你們要等都久才能看到聽到呢，怎麼一點消息都沒有呢，我看過你們蘋道沒有大壯照片可以欣賞的，都是海來阿木而已🤔😟😔🧐",
         "postDate": "1 month ago",
         "likes": "1",
         "disLikes": "",
         "replies": []
-    },
-    {
-        "id": "aaa111",
-        "level": 0,
-        "ownerID": "aaaa2222",
-        "ownerName": "KKBOX 華語單曲",
-        "ownerAvatar":"https://yt3.ggpht.com/8gDo56CtvBhnZMMDY7LtnOHlEDnGLyTLiHPcwiRK_4UAn37U-ZP-C4Zw0mB6ij8vKIXTYlsGjQ=s88-c-k-c0x00ffffff-no-rj",
-        "comment": "好蘋道你們怎麼又沒有在幫我找大壯照片他的歌呢，你們要等都久才能看到聽到呢，怎麼一點消息都沒有呢，我看過你們蘋道沒有大壯照片可以欣賞的，都是海來阿木而已🤔😟😔🧐",
-        "postDate": "1 month ago",
-        "likes": "1",
-        "disLikes": "",
-        "replies": []
-    },
-    {
-        "id": "aaa111",
-        "level": 0,
-        "ownerID": "aaaa2222",
-        "ownerName": "KKBOX 華語單曲",
-        "ownerAvatar":"https://yt3.ggpht.com/8gDo56CtvBhnZMMDY7LtnOHlEDnGLyTLiHPcwiRK_4UAn37U-ZP-C4Zw0mB6ij8vKIXTYlsGjQ=s88-c-k-c0x00ffffff-no-rj",
-        "comment": "好蘋道你們怎麼又沒有在幫我找大壯照片他的歌呢，你們要等都久才能看到聽到呢，怎麼一點消息都沒有呢，我看過你們蘋道沒有大壯照片可以欣賞的，都是海來阿木而已🤔😟😔🧐",
-        "postDate": "1 month ago",
-        "likes": "1",
-        "disLikes": "",
-        "replies": []
-    },
-    {
-        "id": "aaa111",
-        "level": 0,
-        "ownerID": "aaaa2222",
-        "ownerName": "KKBOX 華語單曲",
-        "ownerAvatar":"https://yt3.ggpht.com/8gDo56CtvBhnZMMDY7LtnOHlEDnGLyTLiHPcwiRK_4UAn37U-ZP-C4Zw0mB6ij8vKIXTYlsGjQ=s88-c-k-c0x00ffffff-no-rj",
-        "comment": "好蘋道你們怎麼又沒有在幫我找大壯照片他的歌呢，你們要等都久才能看到聽到呢，怎麼一點消息都沒有呢，我看過你們蘋道沒有大壯照片可以欣賞的，都是海來阿木而已🤔😟😔🧐",
-        "postDate": "1 month ago",
-        "likes": "1",
-        "disLikes": "",
-        "replies": []
-    },
-    {
-        "id": "aaa111",
-        "level": 0,
-        "ownerID": "aaaa2222",
-        "ownerName": "KKBOX 華語單曲",
-        "ownerAvatar":"https://yt3.ggpht.com/8gDo56CtvBhnZMMDY7LtnOHlEDnGLyTLiHPcwiRK_4UAn37U-ZP-C4Zw0mB6ij8vKIXTYlsGjQ=s88-c-k-c0x00ffffff-no-rj",
-        "comment": "好蘋道你們怎麼又沒有在幫我找大壯照片他的歌呢，你們要等都久才能看到聽到呢，怎麼一點消息都沒有呢，我看過你們蘋道沒有大壯照片可以欣賞的，都是海來阿木而已🤔😟😔🧐",
-        "postDate": "1 month ago",
-        "likes": "1",
-        "disLikes": "",
-        "replies": []
-    },
-    {
-        "id": "aaa111",
-        "level": 0,
-        "ownerID": "aaaa2222",
-        "ownerName": "KKBOX 華語單曲",
-        "ownerAvatar":"https://yt3.ggpht.com/8gDo56CtvBhnZMMDY7LtnOHlEDnGLyTLiHPcwiRK_4UAn37U-ZP-C4Zw0mB6ij8vKIXTYlsGjQ=s88-c-k-c0x00ffffff-no-rj",
-        "comment": "好蘋道你們怎麼又沒有在幫我找大壯照片他的歌呢，你們要等都久才能看到聽到呢，怎麼一點消息都沒有呢，我看過你們蘋道沒有大壯照片可以欣賞的，都是海來阿木而已🤔😟😔🧐",
-        "postDate": "1 month ago",
-        "likes": "1",
-        "disLikes": "",
-        "replies": []
-    },
-    {
-        "id": "aaa111",
-        "level": 0,
-        "ownerID": "aaaa2222",
-        "ownerName": "KKBOX 華語單曲",
-        "ownerAvatar":"https://yt3.ggpht.com/8gDo56CtvBhnZMMDY7LtnOHlEDnGLyTLiHPcwiRK_4UAn37U-ZP-C4Zw0mB6ij8vKIXTYlsGjQ=s88-c-k-c0x00ffffff-no-rj",
-        "comment": "好蘋道你們怎麼又沒有在幫我找大壯照片他的歌呢，你們要等都久才能看到聽到呢，怎麼一點消息都沒有呢，我看過你們蘋道沒有大壯照片可以欣賞的，都是海來阿木而已🤔😟😔🧐",
-        "postDate": "1 month ago",
-        "likes": "1",
-        "disLikes": "",
-        "replies": []
-    }   
+      }
+    ]
+  },
+  {
+    "id": "aaa111",
+    "level": 0,
+    "ownerID": "aaaa2222",
+    "ownerName": "KKBOX 華語單曲",
+    "ownerAvatar": "https://yt3.ggpht.com/8gDo56CtvBhnZMMDY7LtnOHlEDnGLyTLiHPcwiRK_4UAn37U-ZP-C4Zw0mB6ij8vKIXTYlsGjQ=s88-c-k-c0x00ffffff-no-rj",
+    "comment": "好蘋道你們怎麼又沒有在幫我找大壯照片他的歌呢，你們要等都久才能看到聽到呢，怎麼一點消息都沒有呢，我看過你們蘋道沒有大壯照片可以欣賞的，都是海來阿木而已🤔😟😔🧐",
+    "postDate": "1 month ago",
+    "likes": "1",
+    "disLikes": "",
+    "replies": []
+  },
+  {
+    "id": "aaa111",
+    "level": 0,
+    "ownerID": "aaaa2222",
+    "ownerName": "KKBOX 華語單曲",
+    "ownerAvatar": "https://yt3.ggpht.com/8gDo56CtvBhnZMMDY7LtnOHlEDnGLyTLiHPcwiRK_4UAn37U-ZP-C4Zw0mB6ij8vKIXTYlsGjQ=s88-c-k-c0x00ffffff-no-rj",
+    "comment": "好蘋道你們怎麼又沒有在幫我找大壯照片他的歌呢，你們要等都久才能看到聽到呢，怎麼一點消息都沒有呢，我看過你們蘋道沒有大壯照片可以欣賞的，都是海來阿木而已🤔😟😔🧐",
+    "postDate": "1 month ago",
+    "likes": "1",
+    "disLikes": "",
+    "replies": []
+  },
+  {
+    "id": "aaa111",
+    "level": 0,
+    "ownerID": "aaaa2222",
+    "ownerName": "KKBOX 華語單曲",
+    "ownerAvatar": "https://yt3.ggpht.com/8gDo56CtvBhnZMMDY7LtnOHlEDnGLyTLiHPcwiRK_4UAn37U-ZP-C4Zw0mB6ij8vKIXTYlsGjQ=s88-c-k-c0x00ffffff-no-rj",
+    "comment": "好蘋道你們怎麼又沒有在幫我找大壯照片他的歌呢，你們要等都久才能看到聽到呢，怎麼一點消息都沒有呢，我看過你們蘋道沒有大壯照片可以欣賞的，都是海來阿木而已🤔😟😔🧐",
+    "postDate": "1 month ago",
+    "likes": "1",
+    "disLikes": "",
+    "replies": []
+  },
+  {
+    "id": "aaa111",
+    "level": 0,
+    "ownerID": "aaaa2222",
+    "ownerName": "KKBOX 華語單曲",
+    "ownerAvatar": "https://yt3.ggpht.com/8gDo56CtvBhnZMMDY7LtnOHlEDnGLyTLiHPcwiRK_4UAn37U-ZP-C4Zw0mB6ij8vKIXTYlsGjQ=s88-c-k-c0x00ffffff-no-rj",
+    "comment": "好蘋道你們怎麼又沒有在幫我找大壯照片他的歌呢，你們要等都久才能看到聽到呢，怎麼一點消息都沒有呢，我看過你們蘋道沒有大壯照片可以欣賞的，都是海來阿木而已🤔😟😔🧐",
+    "postDate": "1 month ago",
+    "likes": "1",
+    "disLikes": "",
+    "replies": []
+  },
+  {
+    "id": "aaa111",
+    "level": 0,
+    "ownerID": "aaaa2222",
+    "ownerName": "KKBOX 華語單曲",
+    "ownerAvatar": "https://yt3.ggpht.com/8gDo56CtvBhnZMMDY7LtnOHlEDnGLyTLiHPcwiRK_4UAn37U-ZP-C4Zw0mB6ij8vKIXTYlsGjQ=s88-c-k-c0x00ffffff-no-rj",
+    "comment": "好蘋道你們怎麼又沒有在幫我找大壯照片他的歌呢，你們要等都久才能看到聽到呢，怎麼一點消息都沒有呢，我看過你們蘋道沒有大壯照片可以欣賞的，都是海來阿木而已🤔😟😔🧐",
+    "postDate": "1 month ago",
+    "likes": "1",
+    "disLikes": "",
+    "replies": []
+  },
+  {
+    "id": "aaa111",
+    "level": 0,
+    "ownerID": "aaaa2222",
+    "ownerName": "KKBOX 華語單曲",
+    "ownerAvatar": "https://yt3.ggpht.com/8gDo56CtvBhnZMMDY7LtnOHlEDnGLyTLiHPcwiRK_4UAn37U-ZP-C4Zw0mB6ij8vKIXTYlsGjQ=s88-c-k-c0x00ffffff-no-rj",
+    "comment": "好蘋道你們怎麼又沒有在幫我找大壯照片他的歌呢，你們要等都久才能看到聽到呢，怎麼一點消息都沒有呢，我看過你們蘋道沒有大壯照片可以欣賞的，都是海來阿木而已🤔😟😔🧐",
+    "postDate": "1 month ago",
+    "likes": "1",
+    "disLikes": "",
+    "replies": []
+  },
+  {
+    "id": "aaa111",
+    "level": 0,
+    "ownerID": "aaaa2222",
+    "ownerName": "KKBOX 華語單曲",
+    "ownerAvatar": "https://yt3.ggpht.com/8gDo56CtvBhnZMMDY7LtnOHlEDnGLyTLiHPcwiRK_4UAn37U-ZP-C4Zw0mB6ij8vKIXTYlsGjQ=s88-c-k-c0x00ffffff-no-rj",
+    "comment": "好蘋道你們怎麼又沒有在幫我找大壯照片他的歌呢，你們要等都久才能看到聽到呢，怎麼一點消息都沒有呢，我看過你們蘋道沒有大壯照片可以欣賞的，都是海來阿木而已🤔😟😔🧐",
+    "postDate": "1 month ago",
+    "likes": "1",
+    "disLikes": "",
+    "replies": []
+  },
+  {
+    "id": "aaa111",
+    "level": 0,
+    "ownerID": "aaaa2222",
+    "ownerName": "KKBOX 華語單曲",
+    "ownerAvatar": "https://yt3.ggpht.com/8gDo56CtvBhnZMMDY7LtnOHlEDnGLyTLiHPcwiRK_4UAn37U-ZP-C4Zw0mB6ij8vKIXTYlsGjQ=s88-c-k-c0x00ffffff-no-rj",
+    "comment": "好蘋道你們怎麼又沒有在幫我找大壯照片他的歌呢，你們要等都久才能看到聽到呢，怎麼一點消息都沒有呢，我看過你們蘋道沒有大壯照片可以欣賞的，都是海來阿木而已🤔😟😔🧐",
+    "postDate": "1 month ago",
+    "likes": "1",
+    "disLikes": "",
+    "replies": []
+  },
+  {
+    "id": "aaa111",
+    "level": 0,
+    "ownerID": "aaaa2222",
+    "ownerName": "KKBOX 華語單曲",
+    "ownerAvatar": "https://yt3.ggpht.com/8gDo56CtvBhnZMMDY7LtnOHlEDnGLyTLiHPcwiRK_4UAn37U-ZP-C4Zw0mB6ij8vKIXTYlsGjQ=s88-c-k-c0x00ffffff-no-rj",
+    "comment": "好蘋道你們怎麼又沒有在幫我找大壯照片他的歌呢，你們要等都久才能看到聽到呢，怎麼一點消息都沒有呢，我看過你們蘋道沒有大壯照片可以欣賞的，都是海來阿木而已🤔😟😔🧐",
+    "postDate": "1 month ago",
+    "likes": "1",
+    "disLikes": "",
+    "replies": []
+  }
 ]
