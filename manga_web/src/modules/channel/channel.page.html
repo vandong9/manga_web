@@ -45,6 +45,46 @@
     font-size: 10px;
     font-family: Roboto, Arial, sans-serif;
   }
+
+  .channel-banner {
+    height: 230px;
+    width: 100%;
+    background: url(https\:\/\/yt3\.ggpht\.com\/N1eJwwdWPuebm-NoRR7bIxUICEbXhbC1b1FgzslQGLEBzUZQ_G9MPQx3TPMYWEwRgBLjBmPK8A\=w1707-fcrop64\=1\,00005a57ffffa5a8-k-c0xffffffff-no-nd-rj);
+  }
+  .channel-script-info {
+    height: 96px;
+    display: flex;
+    padding: 16px 24px;
+  }
+  .channel-menu {
+    height: 48px;
+    display: flex;
+  }
+
+  .channel-menu-item {
+    min-width: 180px;
+    padding: 16px;
+    text-align: left;
+    font-size: 1.2rem;
+    color: gray;
+    cursor: pointer;
+  }
+  .channel-menu-item :hover {
+    color: white;
+  }
+  .channel-menu-item-selected {
+    min-width: 180px;
+    padding: 16px;
+    text-align: left;
+    font-size: 1.2rem;
+    color: white;
+  }
+
+  .channel-avatar {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+  }
 </style>
 
 <div id="app">
@@ -53,16 +93,30 @@
       (onClickHambegerEmitter)="listenToggleHambegerEmit($event)"
     ></page-header>
   </div>
-
   <div id="body">
     <div>
       <left-menu [haveChange]="toggle"></left-menu>
     </div>
-    <div>
-      <div>
-        <channel-menu></channel-menu>
+    <div style="width: 100%">
+      <img class="channel-banner" />
+      <div class="channel-script-info">
+        <img src="{{ channelModel.avatar }}" class="channel-avatar" />
+        <div style="padding-left: 18px">
+          <h3>{{ channelModel.name }}</h3>
+          {{ channelModel.subcribers }}
         </div>
-
+      </div>
+      <div class="channel-menu">
+        <ng-container *ngFor="let menuItem of menuItems">
+          <div
+            [ngClass]="currentSelectedMenuItemID == menuItem.id ? 'channel-menu-item-selected ': 'channel-menu-item'"
+            (click)="onSelectMenuItem(menuItem.id)"
+          >
+            {{ menuItem.title }}
+          </div>
+        </ng-container>
+        <hr />
+      </div>
     </div>
   </div>
 </div>
