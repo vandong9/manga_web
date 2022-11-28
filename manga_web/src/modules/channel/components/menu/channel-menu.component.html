@@ -1,0 +1,36 @@
+<style>
+  #horizontal-scroll-wrapper {
+    width: 300px;
+    height: 100px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    display: flex;
+  }
+
+  #horizontal-scroll-wrapper > div {
+    min-width: 100px;
+    height: 100px;
+    padding: 0 8px;
+  }
+</style>
+
+<div>
+  <div id="horizontal-scroll-wrapper">
+    <div>item 1</div>
+    <div>item 2</div>
+    <div>item 3</div>
+    <div>item 4</div>
+    <div>item 5</div>
+    <div>item 6</div>
+    <div>item 7</div>
+    <div>item 8</div>
+  </div>
+  <!-- scroll back button -->
+  <div style="float: left">
+    <button onclick="scrollBack();">Back</button>
+  </div>
+  <!-- scroll next button -->
+  <div style="float: right">
+    <button onclick="scrollNext();">Next</button>
+  </div>
+</div>
