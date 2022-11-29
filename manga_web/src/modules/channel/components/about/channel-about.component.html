@@ -1,0 +1,80 @@
+<style>
+  .section-header {
+    padding: 16px 0;
+  }
+  .section-title {
+    font-size: 1rem;
+    padding: 8px 0 16px 0;
+  }
+  .section-detail {
+    font-size: 0.8rem;
+  }
+  .section-line {
+    height: 1px;
+    border-bottom: 1px gray solid;
+  }
+  .about-right-left {
+    width: 65%;
+  }
+  .about-right-column {
+    width: 35%;
+    margin-left: 48px;
+    padding: 16px 0;
+  }
+</style>
+
+<div style="display: flex">
+  <!-- Left column -->
+  <div class="about-right-left">
+    <div class="section-header">
+      <div class="section-title">Description</div>
+      <div class="section-detail">
+        {{ aboutModel.description }}
+      </div>
+    </div>
+    <!-- Detail section  -->
+    <div class="section-header">
+      <div class="section-line"></div>
+      <div class="section-title">Detail</div>
+      <div style="display: flex">
+        <div
+          *ngFor="let item of aboutModel.details"
+          style="height: 100%; margin-right: 16px"
+        >
+          <div class="section-detail">{{ item.title }}</div>
+        </div>
+        <div *ngFor="let item of aboutModel.details" style="height: 100%">
+          <div class="section-detail">{{ item.value }}</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Link Section -->
+    <div class="section-header">
+      <div class="section-line"></div>
+      <div class="section-title">Links</div>
+      <div style="display: flex">
+        <div
+          *ngFor="let item of aboutModel.links"
+          style="height: 100%; margin-right: 16px"
+        >
+          <div>
+            <a href="{{ item.value }}" style="color: #3ea6ff">
+              {{ item.title }}</a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- right column -->
+  <div class="about-right-column">
+    <div class="section-title">Stats</div>
+    <div class="section-line"></div>
+    <div class="section-title">{{ aboutModel.joinDate }}</div>
+    <div class="section-line"></div>
+    <div class="section-title">{{ aboutModel.totalView }}</div>
+    <div class="section-line"></div>
+  </div>
+</div>

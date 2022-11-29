@@ -59,12 +59,12 @@
   .channel-menu {
     height: 48px;
     display: flex;
+    border-bottom: 1px solid gray;
   }
 
   .channel-menu-item {
-    min-width: 180px;
-    padding: 16px;
-    text-align: left;
+    padding: 8px 16px;
+    text-align: center;
     font-size: 1.2rem;
     color: gray;
     cursor: pointer;
@@ -73,11 +73,11 @@
     color: white;
   }
   .channel-menu-item-selected {
-    min-width: 180px;
-    padding: 16px;
-    text-align: left;
+    padding: 8px 16px;
+    text-align: center;
     font-size: 1.2rem;
     color: white;
+    border-bottom: 2px solid grey;
   }
 
   .channel-avatar {
@@ -106,6 +106,7 @@
           {{ channelModel.subcribers }}
         </div>
       </div>
+      <!-- Menu -->
       <div class="channel-menu">
         <ng-container *ngFor="let menuItem of menuItems">
           <div
@@ -116,6 +117,13 @@
           </div>
         </ng-container>
         <hr />
+      </div>
+
+      <!-- Detail of menu item -->
+      <div>
+        <div [hidden]="currentSelectedMenuItemID != 'about'">
+          <channel-about></channel-about>
+        </div>
       </div>
     </div>
   </div>

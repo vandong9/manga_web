@@ -27,6 +27,7 @@ export class ChannelPage implements OnInit {
     { id: 'playlist', title: 'Playlist' },
     { id: 'community', title: 'community' },
     { id: 'channels', title: 'Channels' },
+    { id: 'about', title: 'About' },
   ];
 
   currentSelectedMenuItemID: String = 'home';
