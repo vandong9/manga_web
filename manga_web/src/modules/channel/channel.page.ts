@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { IChannelModel } from 'src/models/channel';
+import { VideoLinkItem } from 'src/models/video-link-item';
 import { VideoService } from 'src/services/video.service';
 
 @Component({
@@ -11,7 +12,6 @@ import { VideoService } from 'src/services/video.service';
 export class ChannelPage implements OnInit {
   channelID?: String;
   toggle: Boolean = false;
-
   channelModel: IChannelModel = {
     id: '123456',
     name: 'KKBOX 華語單曲',
@@ -36,10 +36,9 @@ export class ChannelPage implements OnInit {
     this.currentSelectedMenuItemID = id;
   }
 
-  constructor(
-    private _route: ActivatedRoute,
-    private videoService: VideoService
-  ) {}
+  constructor(private _route: ActivatedRoute, private videoService: VideoService) {
+
+  }
 
   ngOnInit() {
     this.channelID = this._route.snapshot.paramMap.get('id') ?? '';

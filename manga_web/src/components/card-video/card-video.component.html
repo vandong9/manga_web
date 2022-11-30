@@ -3,29 +3,37 @@
     width: 300px;
     padding: 8px;
   }
+  .card-image-container {
+    border-radius: 12px;
+    background-color: blanchedalmond;
+    margin-bottom: 8px;
+  }
   .card-image {
-    padding: 8px 0px;
     height: 180px;
     margin-left: auto;
     margin-right: auto;
+    border-radius: inherit;
   }
   .card-channel-avatar {
-    margin: 0px 8px;
+    min-width: 36px;
+    min-height: 36px;
     width: 36px;
     height: 36px;
-    border-radius: 50%;
+    margin-right:10px;
   }
   .card-video-title {
     font-size: 0.8rem;
   }
 </style>
 <div class="card-video">
+  <div class="card-image-container">
   <img
     src="{{ videoLink.image }}"
     class="card-image"
     (click)="onSelectVideo()"
   />
-  <div style="display: flex">
+</div>
+  <div [hidden]="!isShowChannel" style="display: flex">
     <div class="card-channel-avatar">
       <channel-avatar [channel]="videoLink.channel"></channel-avatar>
     </div>

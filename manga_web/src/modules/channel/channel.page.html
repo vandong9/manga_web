@@ -120,7 +120,14 @@
       </div>
 
       <!-- Detail of menu item -->
+
       <div>
+        <!-- Video tab content -->
+        <div [hidden]="currentSelectedMenuItemID != 'videos'">
+          <channel-videos></channel-videos>          
+        </div>
+        <!-- About tab content -->
+
         <div [hidden]="currentSelectedMenuItemID != 'about'">
           <channel-about></channel-about>
         </div>

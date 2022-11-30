@@ -7,7 +7,7 @@ import { IChannelModel } from 'src/models/channel';
   template: ` <img
     src="{{ channel?.avatar ?? '' }}"
     style="border-radius: 50%; width:
-    100%; height: 100%;"
+    100%; height: 100%;" 
     (click)="onClick()"
   />`,
 })

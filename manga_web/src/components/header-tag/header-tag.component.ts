@@ -2,7 +2,7 @@ import { Component } from "@angular/core";
 
 @Component({
     selector: 'header-tag',
-    templateUrl: 'left-menu.component.html',
+    templateUrl: 'header-tag.component.html',
     styleUrls: [],
     
 })

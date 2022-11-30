@@ -35,7 +35,7 @@ export class RelativeVideoComponent {
       <div>
       {{ relativeVideo.title }}
       </div>
-      {{ relativeVideo.channelName }}
+      {{ relativeVideo.channel.name }}
       <div style="display: flex;">
         {{ relativeVideo.viewCount }}
         {{ relativeVideo.uploadedTime }}

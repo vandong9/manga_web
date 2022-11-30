@@ -1,9 +1,9 @@
 import { Component, NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
-import { ListVideoComponent } from '../../components/list-video/list-video.component';
-import { CardVideoComponent } from '../../components/list-video/card-video.component';
 import { SharedModule } from '../shared/shared.module';
+import { VideoLinkItem } from 'src/models/video-link-item';
+import { VideoService } from 'src/services/video.service';
 
 @Component({
   selector: 'home-module',
@@ -11,6 +11,15 @@ import { SharedModule } from '../shared/shared.module';
 })
 export class HomePageComponent {
   toggle: Boolean = false;
+
+  videoLinks: VideoLinkItem[] = [];
+  
+  constructor(private videoService: VideoService) {
+    videoService.getAll().subscribe((videos) => {
+      this.videoLinks = this.videoLinks.concat(videos);
+    });
+  }
+
   listenToggleHambegerEmit(event: any) {
     console.log(event);
     this.toggle = !this.toggle;
@@ -19,7 +28,7 @@ export class HomePageComponent {
 
 @NgModule({
   imports: [CommonModule, SharedModule],
-  declarations: [HomePageComponent, ListVideoComponent, CardVideoComponent],
+  declarations: [HomePageComponent],
   // providers: [HttpErrorHandler],
   exports: [HomePageComponent],
   bootstrap: [HomePageComponent],

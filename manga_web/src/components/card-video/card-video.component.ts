@@ -8,12 +8,9 @@ import { VideoLinkItem } from '../../models/video-link-item';
 })
 export class CardVideoComponent {
   @Input() videoLink!: VideoLinkItem;
+  @Input() isShowChannel: Boolean = true
 
   constructor(private _router: Router) {}
-
-  onSelectChannel() {
-    this._router.navigate(['/channel', { id: this.videoLink.channel.id }]);
-  }
   onSelectVideo() {
     this._router.navigate(['/video/', this.videoLink.channel.id]);
   }
