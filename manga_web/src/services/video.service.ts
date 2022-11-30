@@ -38,40 +38,6 @@ export class VideoService {
     //   .pipe(catchError(this.handleError('search', [])));
   }
 
-  getRecentVideoOfChannel(channelID: String): Observable<VideoLinkItem[]> {
-    var observer = new Observable<VideoLinkItem[]>((subscriber) => {
-      this.http.get('assets/mock/all-video.json').subscribe((data) => {
-        let jsonString = JSON.stringify(data);
-        var videos: Array<VideoLinkItem> = JSON.parse(jsonString);
-        subscriber.next(videos);
-        subscriber.complete();
-      });
-    });
-
-    return observer;
-
-    // return this.http
-    //   .get<VideoLinkItem[]>(this.allVideosLink, {})
-    //   .pipe(catchError(this.handleError('search', [])));
-  }
-
-  getPopularVideoOfChannel(channelID: String): Observable<VideoLinkItem[]> {
-    var observer = new Observable<VideoLinkItem[]>((subscriber) => {
-      this.http.get('assets/mock/all-video.json').subscribe((data) => {
-        let jsonString = JSON.stringify(data);
-        var videos: Array<VideoLinkItem> = JSON.parse(jsonString);
-        subscriber.next(videos);
-        subscriber.complete();
-      });
-    });
-
-    return observer;
-
-    // return this.http
-    //   .get<VideoLinkItem[]>(this.allVideosLink, {})
-    //   .pipe(catchError(this.handleError('search', [])));
-  }
-
   getRelativeVideo(): Observable<VideoLinkItem[]> {
     var observer = new Observable<VideoLinkItem[]>((subscriber) => {
       this.http.get('assets/mock/all-video.json').subscribe((data) => {
@@ -90,7 +56,7 @@ export class VideoService {
       this.http.get('assets/mock/video-comment.json').subscribe((data) => {
         let jsonString = JSON.stringify(data);
         var comments: Array<ICommentModel> = JSON.parse(jsonString);
-        console.log( comments[2])
+        console.log(comments[2]);
         subscriber.next(comments);
         subscriber.complete();
       });
@@ -99,6 +65,45 @@ export class VideoService {
     return observer;
   }
 
+  //
+  // Request for Channel detail
+  //
 
+  getRecentVideoOfChannel(channelID: String): Observable<VideoLinkItem[]> {
+    var observer = new Observable<VideoLinkItem[]>((subscriber) => {
+      this.http
+        .get('assets/mock/channel-recent-videos.json')
+        .subscribe((data) => {
+          let jsonString = JSON.stringify(data);
+          var videos: Array<VideoLinkItem> = JSON.parse(jsonString);
+          subscriber.next(videos);
+          subscriber.complete();
+        });
+    });
 
+    return observer;
+
+    // return this.http
+    //   .get<VideoLinkItem[]>(this.allVideosLink, {})
+    //   .pipe(catchError(this.handleError('search', [])));
+  }
+
+  getPopularVideoOfChannel(channelID: String): Observable<VideoLinkItem[]> {
+    var observer = new Observable<VideoLinkItem[]>((subscriber) => {
+      this.http
+        .get('assets/mock/channel-popular-videos.json')
+        .subscribe((data) => {
+          let jsonString = JSON.stringify(data);
+          var videos: Array<VideoLinkItem> = JSON.parse(jsonString);
+          subscriber.next(videos);
+          subscriber.complete();
+        });
+    });
+
+    return observer;
+
+    // return this.http
+    //   .get<VideoLinkItem[]>(this.allVideosLink, {})
+    //   .pipe(catchError(this.handleError('search', [])));
+  }
 }

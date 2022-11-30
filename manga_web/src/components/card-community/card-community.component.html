@@ -1,0 +1,50 @@
+<style>
+  .card-community {
+    border: 1px gray solid;
+    border-radius: 16px;
+    padding: 16px;
+    display: flex;
+    width: 80%;
+  }
+  .card-community-image-container {
+    width: 100%;
+    padding-top: 100%; /* 1:1 Aspect Ratio */
+    position: relative; /* If you want text inside of it */
+  }
+  .card-community-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+  }
+  .card-community-avatar-container {
+    min-width: 36px;
+    width: 36px;
+    min-height: 36px;
+    height: 36px;
+    margin-right: 8px;
+  }
+</style>
+
+<div class="card-community">
+  <div class="card-community-avatar-container">
+    <channel-avatar [channel]="communityModel.channel"></channel-avatar>
+  </div>
+  <div>
+    <div style="margin-bottom: 8px">
+      <div style="font-size: 0.8rem; padding-bottom: 8px">
+        {{ communityModel.channel.name }} {{ communityModel.uploadedDate }}
+      </div>
+      <div>{{ communityModel.scriptContent }}</div>
+      <div>{{ communityModel.fullContent }}</div>
+    </div>
+    <div style="max-width: 638px; min-width: 638px">
+      <div class="card-community-image-container">
+        <div class="card-community-image">
+          <img src="{{ communityModel.image }}" style="border-radius: 10px" />
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -24,6 +24,7 @@ export class ChannelPage implements OnInit {
   menuItems: IChanneMenuItem[] = [
     { id: 'home', title: 'Home' },
     { id: 'videos', title: 'Videos' },
+    { id: 'shorts', title: 'shorts' },
     { id: 'playlist', title: 'Playlist' },
     { id: 'community', title: 'community' },
     { id: 'channels', title: 'Channels' },
@@ -36,9 +37,10 @@ export class ChannelPage implements OnInit {
     this.currentSelectedMenuItemID = id;
   }
 
-  constructor(private _route: ActivatedRoute, private videoService: VideoService) {
-
-  }
+  constructor(
+    private _route: ActivatedRoute,
+    private videoService: VideoService
+  ) {}
 
   ngOnInit() {
     this.channelID = this._route.snapshot.paramMap.get('id') ?? '';

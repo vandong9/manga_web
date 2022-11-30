@@ -1,0 +1,44 @@
+<style>
+  .card-video {
+    width: 174px;
+    padding: 8px;
+  }
+  .card-image-container {
+    border-radius: 12px;
+    background-color: blanchedalmond;
+    margin-bottom: 8px;
+  }
+  .card-image {
+    height: 308px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: inherit;
+  }
+  .card-channel-avatar {
+    min-width: 36px;
+    min-height: 36px;
+    width: 36px;
+    height: 36px;
+    margin-right: 10px;
+  }
+  .card-video-title {
+    font-size: 0.8rem;
+  }
+</style>
+<div class="card-video">
+  <div class="card-image-container">
+    <img
+      src="{{ videoLink.image }}"
+      class="card-image"
+      (click)="onSelectVideo()"
+    />
+  </div>
+  <div style="display: flex">
+    <!-- <img src="{{ videoLink.channelAvatar }}" class="card-channel-avatar" /> -->
+    <div class="card-video-title">
+      {{ videoLink.title }}<br />
+      {{ videoLink.viewCount }}
+      {{ videoLink.uploadedTime }}
+    </div>
+  </div>
+</div>

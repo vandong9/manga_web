@@ -1,14 +1,32 @@
+<style>
+  .player-container {
+    background-color: red;
+    width: 100%;
+    padding-top: 50%; /* 1:1 Aspect Ratio */
+    position: relative; /* If you want text inside of it */
+  }
+
+  .player {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+  }
+</style>
 <!-- Player -->
-<div>
-  <iframe
-    class="w-full"
-    height="600"
-    src="https://www.youtube.com/embed/zMlLldpCmnE"
-    title="YouTube video player"
-    frameborder="0"
-    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-    allowfullscreen
-  ></iframe>
+<div class="player-container">
+  <div class="player">
+    <iframe
+      class="w-full"
+      height="100%"
+      src="https://www.youtube.com/embed/zMlLldpCmnE"
+      title="YouTube video player"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen
+    ></iframe>
+  </div>
 </div>
 
 <!-- video info -->
@@ -35,10 +53,8 @@
 
 <!-- Description -->
 <div>
-  {{ videoDetail.description}}
+  {{ videoDetail.description }}
 </div>
 
 <!-- Comments -->
-<div>
-  
-</div>
+<div></div>
