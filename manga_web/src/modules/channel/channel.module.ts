@@ -6,6 +6,7 @@ import { ChannelPage } from './channel.page';
 import { ChannelAboutComponent } from './components/about/channel-about.component';
 import { ChannelChannelsComponent } from './components/channels/channel-channels.component';
 import { ChannelCommunityComponent } from './components/community/channel-community.component';
+import { ChannelHomeComponent } from './components/home/channel-home.component';
 import { ChannelLiveComponent } from './components/live/channe-live.component';
 import { ChannelMenuComponent } from './components/menu/channel-menu.component';
 import { ChannelPlaylistComponent } from './components/playlist/channel-playlist.component';
@@ -23,7 +24,8 @@ import { ChannelVideosComponent } from './components/videos/channe-videos.compon
     ChannelCommunityComponent,
     ChannelPlaylistComponent,
     ChannelLiveComponent,
-    ChannelChannelsComponent
+    ChannelChannelsComponent,
+    ChannelHomeComponent,
   ],
   exports: [ChannelPage],
   bootstrap: [ChannelPage],

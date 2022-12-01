@@ -122,12 +122,16 @@
       <!-- Detail of menu item -->
 
       <div>
+        <!-- Live tab content -->
+        <div [hidden]="currentSelectedMenuItemID != 'home'">
+          <channel-home [channelID]="channelID??''"></channel-home>
+        </div>
 
         <!-- Live tab content -->
         <div [hidden]="currentSelectedMenuItemID != 'channels'">
           <channel-channels [channelID]="channelID??''"></channel-channels>
         </div>
-        
+
         <!-- Live tab content -->
         <div [hidden]="currentSelectedMenuItemID != 'playlist'">
           <channel-playlist></channel-playlist>

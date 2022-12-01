@@ -7,6 +7,7 @@ import { HttpClient } from '@angular/common/http';
 import { HandleError, HttpErrorHandler } from './error-handler.service';
 import { ICommentModel } from 'src/models/comment';
 import { IChannelCategory, IChannelModel } from 'src/models/channel';
+import { Category } from 'src/models/category';
 
 // import * as videos from '../assets/mock/all-video.json';
 //  src/assets/mock/all-video.json';
@@ -21,6 +22,19 @@ export class ChannelDetailService {
   }
   allVideosLink = '';
   relateVideoLink = '';
+
+  getDetailOfChannel(channelID: String): Observable<Category[]> {
+    var observer = new Observable<Category[]>((subscriber) => {
+      this.http.get('assets/mock/channel-detail.json').subscribe((data) => {
+        let jsonString = JSON.stringify(data);
+        var categories: Array<Category> = JSON.parse(jsonString);
+        subscriber.next(categories);
+        subscriber.complete();
+      });
+    });
+
+    return observer;
+  }
 
   getRecentVideoOfChannel(channelID: String): Observable<IVideoLinkItem[]> {
     var observer = new Observable<IVideoLinkItem[]>((subscriber) => {
@@ -60,16 +74,16 @@ export class ChannelDetailService {
     //   .pipe(catchError(this.handleError('search', [])));
   }
 
-  getRelativeChannelOfChannel(channelID: String): Observable<IChannelCategory[]> {
+  getRelativeChannelOfChannel(
+    channelID: String
+  ): Observable<IChannelCategory[]> {
     var observer = new Observable<IChannelCategory[]>((subscriber) => {
-      this.http
-        .get('assets/mock/channel-channels.json')
-        .subscribe((data) => {
-          let jsonString = JSON.stringify(data);
-          var channels: Array<IChannelCategory> = JSON.parse(jsonString);
-          subscriber.next(channels);
-          subscriber.complete();
-        });
+      this.http.get('assets/mock/channel-channels.json').subscribe((data) => {
+        let jsonString = JSON.stringify(data);
+        var channels: Array<IChannelCategory> = JSON.parse(jsonString);
+        subscriber.next(channels);
+        subscriber.complete();
+      });
     });
 
     return observer;

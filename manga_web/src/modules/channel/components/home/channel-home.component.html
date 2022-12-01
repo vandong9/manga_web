@@ -1,0 +1,43 @@
+<style>
+  .cate-title {
+    font-size: 1rem;
+    padding-bottom: 8px;
+  }
+  .cate-line {
+    border-bottom: 1px gray solid;
+  }
+</style>
+
+<div>
+  <ng-container *ngFor="let cate of categories; let i = index">
+    <div>
+      <div>
+        <div class="cate-title">{{ cate.name }}</div>
+        <div>{{ cate.description }}</div>
+      </div>
+      <!-- display cate type video -->
+      <div *ngIf="cate.type == 'video'">
+        <video-grid
+          [videoLinks]="getVideosForCateAtIndex(i)"
+          [isShowChannel]="false"
+        ></video-grid>
+      </div>
+
+      <!-- Display cate type playlist -->
+      <div *ngIf="cate.type == 'playlist'">
+        <div
+          class="mt-6 grid grid-cols-1 gap-y-10 gap-x-6 sm:grid-cols-1 lg:grid-cols-6 xl:gap-x-8"
+        >
+          <div *ngFor="let playlist of getPlaylistForCateAtIndex(i)">
+            <div class="group relative">
+              <card-playlist [playlistModel]="playlist"></card-playlist>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div style="height: 8px"></div>
+      <div class="cate-line"></div>
+      <div style="height: 16px"></div>
+    </div>
+  </ng-container>
+</div>
