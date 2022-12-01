@@ -1,0 +1,11 @@
+<div>
+  <div
+    class="mt-6 grid grid-cols-1 gap-y-10 gap-x-6 sm:grid-cols-1 lg:grid-cols-6 xl:gap-x-8"
+  >
+    <div *ngFor="let playlist of playlistModels">
+      <div class="group relative">
+        <card-playlist [playlistModel]="playlist"></card-playlist>
+      </div>
+    </div>
+  </div>
+</div>

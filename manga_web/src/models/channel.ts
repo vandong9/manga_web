@@ -5,3 +5,7 @@ export interface IChannelModel {
     subcriberscount: Number;
     subcribers: string;
   }
+  export interface IChannelCategory {
+    name: String
+    channels: IChannelModel[]
+}

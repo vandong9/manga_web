@@ -1,0 +1,52 @@
+<style>
+  .videos-menu-bar {
+    display: flex;
+  }
+  .videos_menu_item {
+    border-radius: 8px;
+    font-size: 1rem;
+    padding: 2px 16px;
+    margin: 0 4px;
+    margin-top: 8px;
+    background-color: black;
+  }
+  .video_menu_item_selected {
+    background-color: gray;
+  }
+</style>
+<div class="videos-menu-bar">
+  <div
+    class="videos_menu_item"
+    [ngClass]="
+      selectedTab == SelectedTab.recent ? 'video_menu_item_selected' : ''
+    "
+    (click)="onSelectMenuItem(SelectedTab.recent)"
+  >
+    Recently
+  </div>
+  <div
+    class="videos_menu_item"
+    [ngClass]="
+      selectedTab == SelectedTab.popular ? 'video_menu_item_selected' : ''
+    "
+    (click)="onSelectMenuItem(SelectedTab.popular)"
+  >
+    Popular
+  </div>
+</div>
+
+<div>
+  <div [hidden]="selectedTab != SelectedTab.recent">
+    <video-grid
+      [videoLinks]="recentUploadedVideos"
+      [isShowChannel]="false"
+    ></video-grid>
+  </div>
+
+  <div [hidden]="selectedTab != SelectedTab.popular">
+    <video-grid
+      [videoLinks]="popularVideos"
+      [isShowChannel]="false"
+    ></video-grid>
+  </div>
+</div>

@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { IChannelModel } from 'src/models/channel';
-import { VideoLinkItem } from 'src/models/video-link-item';
 import { VideoService } from 'src/services/video.service';
 
 @Component({
@@ -24,7 +23,8 @@ export class ChannelPage implements OnInit {
   menuItems: IChanneMenuItem[] = [
     { id: 'home', title: 'Home' },
     { id: 'videos', title: 'Videos' },
-    { id: 'shorts', title: 'shorts' },
+    { id: 'shorts', title: 'Shorts' },
+    { id: 'live', title: 'Live' },
     { id: 'playlist', title: 'Playlist' },
     { id: 'community', title: 'community' },
     { id: 'channels', title: 'Channels' },

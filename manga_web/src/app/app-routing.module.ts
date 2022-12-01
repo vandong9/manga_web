@@ -9,6 +9,7 @@ import { PlayVideoModule } from '../modules/play-video/play-video.module';
 const routes: Routes = [
   { path: '', component: HomePageComponent },
   { path: 'video/:id', component: PlayVideoPage },
+  { path: 'playlist/:id', component: PlayVideoPage },
   { path: 'short', component: ShortPage },
   { path: 'short/:id', component: ShortPage },
   { path: 'channel/:id', component: ChannelPage },

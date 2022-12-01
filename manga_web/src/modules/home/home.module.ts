@@ -2,7 +2,7 @@ import { Component, NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import { SharedModule } from '../shared/shared.module';
-import { VideoLinkItem } from 'src/models/video-link-item';
+import { IVideoLinkItem } from 'src/models/video-link-item';
 import { VideoService } from 'src/services/video.service';
 
 @Component({
@@ -12,7 +12,7 @@ import { VideoService } from 'src/services/video.service';
 export class HomePageComponent {
   toggle: Boolean = false;
 
-  videoLinks: VideoLinkItem[] = [];
+  videoLinks: IVideoLinkItem[] = [];
   
   constructor(private videoService: VideoService) {
     videoService.getAll().subscribe((videos) => {

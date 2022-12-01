@@ -10,6 +10,7 @@ import {
   MessageService,
 } from 'src/services/error-handler.service';
 import { ChannelModule } from 'src/modules/channel/channel.module';
+import { ChannelDetailService } from 'src/services/channel-detail.service';
 
 @NgModule({
   declarations: [AppComponent],
@@ -20,7 +21,7 @@ import { ChannelModule } from 'src/modules/channel/channel.module';
     HomeModule,
     ChannelModule,
   ],
-  providers: [HttpErrorHandler, MessageService],
+  providers: [HttpErrorHandler, MessageService, ChannelDetailService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

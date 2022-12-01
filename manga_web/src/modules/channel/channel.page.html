@@ -122,6 +122,22 @@
       <!-- Detail of menu item -->
 
       <div>
+
+        <!-- Live tab content -->
+        <div [hidden]="currentSelectedMenuItemID != 'channels'">
+          <channel-channels [channelID]="channelID??''"></channel-channels>
+        </div>
+        
+        <!-- Live tab content -->
+        <div [hidden]="currentSelectedMenuItemID != 'playlist'">
+          <channel-playlist></channel-playlist>
+        </div>
+
+        <!-- Live tab content -->
+        <div [hidden]="currentSelectedMenuItemID != 'live'">
+          <channel-live></channel-live>
+        </div>
+
         <!-- Short tab content -->
         <div
           [hidden]="currentSelectedMenuItemID != 'community'"
@@ -134,10 +150,12 @@
         <div [hidden]="currentSelectedMenuItemID != 'shorts'">
           <channel-short></channel-short>
         </div>
+
         <!-- Video tab content -->
         <div [hidden]="currentSelectedMenuItemID != 'videos'">
           <channel-videos></channel-videos>
         </div>
+
         <!-- About tab content -->
         <div [hidden]="currentSelectedMenuItemID != 'about'">
           <channel-about></channel-about>

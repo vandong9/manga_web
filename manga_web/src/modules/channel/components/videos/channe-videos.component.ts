@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { VideoLinkItem } from 'src/models/video-link-item';
+import { IVideoLinkItem } from 'src/models/video-link-item';
 import { VideoService } from 'src/services/video.service';
 
 @Component({
@@ -10,8 +10,8 @@ export class ChannelVideosComponent implements OnInit {
   SelectedTab = SelectedTab;
   @Input() channelID: String = '';
   selectedTab: SelectedTab = SelectedTab.recent;
-  recentUploadedVideos: VideoLinkItem[] = [];
-  popularVideos: VideoLinkItem[] = [];
+  recentUploadedVideos: IVideoLinkItem[] = [];
+  popularVideos: IVideoLinkItem[] = [];
 
   constructor(private videoService: VideoService) {}
 

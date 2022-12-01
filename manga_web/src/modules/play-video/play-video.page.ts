@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { VideoLinkItem } from 'src/models/video-link-item';
+import { IVideoLinkItem } from 'src/models/video-link-item';
 import { VideoService } from 'src/services/video.service';
 
 @Component({
@@ -8,7 +8,7 @@ import { VideoService } from 'src/services/video.service';
 })
 export class PlayVideoPage implements OnInit {
   toggle: Boolean = false;
-  relativeVideos: VideoLinkItem[] = [];
+  relativeVideos: IVideoLinkItem[] = [];
   videoID: String = ""
 
   constructor(private videoService: VideoService){}

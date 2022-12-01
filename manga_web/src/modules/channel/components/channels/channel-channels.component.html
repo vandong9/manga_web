@@ -1,0 +1,33 @@
+<style>
+  .channel-list {
+    display: flex;
+  }
+  .section-header {
+    font-size: 0.9rem;
+    color: lightgrey;
+    padding: 16px 0;
+  }
+  .section-end-line {
+    height: 1px;
+    margin-top: 32px;
+    border-bottom: 1px gray solid;
+  }
+  .section-list-item {
+    margin: 0 16px;
+  }
+</style>
+<div *ngFor="let category of channelCategories">
+  <div class="section-header">
+    {{ category.name }}
+  </div>
+  <div>
+    <div class="channel-list">
+    <div *ngFor="let channel of category.channels">
+        <div class="section-list-item">
+      <card-channel [channel]="channel"></card-channel>
+    </div>
+    </div>
+</div>
+    <div class="section-end-line"></div>
+  </div>
+</div>

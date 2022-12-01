@@ -3,10 +3,10 @@ import { IVideoLinkItem } from 'src/models/video-link-item';
 import { VideoService } from 'src/services/video.service';
 
 @Component({
-  selector: 'channel-short',
-  templateUrl: 'channel-short.component.html',
+  selector: 'channel-live',
+  templateUrl: 'channe-live.component.html',
 })
-export class ChannelShortComponent implements OnInit {
+export class ChannelLiveComponent implements OnInit {
   SelectedTab = SelectedTab;
   @Input() channelID: String = '';
   selectedTab: SelectedTab = SelectedTab.recent;

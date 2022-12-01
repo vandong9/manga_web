@@ -1,0 +1,65 @@
+<style>
+  .playlist-image-container {
+    height: 118px;
+    border-radius: 8px;
+    cursor: pointer;
+    display: flex;
+  }
+  .playlist-image {
+    border-radius: 8px;
+    height: 118px;
+    width: 100%;
+  }
+  .playlist-count {
+    background-color: #000000AA;
+    margin-left: -30%;
+    /* position: absolute; */
+    /* top: 0px;
+    right: 0px;
+    bottom: 0px; */
+    width: 92px;
+z-index: 999;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 0.9rem;
+  }
+
+  .playlist-view-full {
+    margin-top: 8px;
+    color: gray;
+    cursor: pointer;
+    font-size: 0.8rem;
+  }
+</style>
+
+<div>
+  <div class="playlist-image-container" (click)="onClickViewPlaylist()">
+    <img src="{{ playlistModel.image }}" class="playlist-image" />
+    <div class="playlist-count">
+      <div style="padding-top: 50%;">{{ playlistModel.videoCount }}</div>
+      <div style=" width: 24px; 
+      height: 24px; margin-left: 8px; fill: white;"><svg
+                viewBox="0 0 24 24"
+                preserveAspectRatio="xMidYMid meet"
+                focusable="false"
+                style="
+                  pointer-events: none;
+                  display: block;
+                  width: 100%;
+                  height: 100%;
+                "
+              >
+              <g class="style-scope yt-icon">
+                <path
+                d="M22,7H2v1h20V7z M13,12H2v-1h11V12z M13,16H2v-1h11V16z M15,19v-8l7,4L15,19z"
+                  class="style-scope yt-icon"
+                ></path>
+              </g>
+            </svg>
+        </div>
+    </div>
+  </div>
+  <div>{{ playlistModel.name }}</div>
+  <div class="playlist-view-full" (click)="onClickViewPlaylist()">View full playlist</div>
+</div>

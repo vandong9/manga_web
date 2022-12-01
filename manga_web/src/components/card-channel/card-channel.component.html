@@ -1,0 +1,43 @@
+<style>
+  .channel-image {
+    width: 103px;
+    min-width: 103px;
+    height: 103px;
+    min-height: 103px;
+    border-radius: 50%;
+  }
+  .channel-subcribe {
+    background-color: gray;
+    border-radius: 15px;
+    /* margin-top: 10px; */
+    padding: 2px 8px;
+    justify-content: center;
+    /* height: 30px; */
+    /* max-height: 30px; */
+    font-size: 0.8rem;
+    text-align: center;
+    color: lightgray;
+  }
+  .channel-name {
+    font-size: 0.9rem;
+    color: lightgray;
+    text-align: center;
+  }
+  .channel-subcribe-count {
+    font-size: 0.8rem;
+    color: gray;
+    text-align: center;
+  }
+</style>
+<div style="align-items: center">
+  <img
+    src="{{ channel.avatar }}"
+    class="channel-image"
+    (click)="onClickChannel()"
+  />
+  <div class="channel-name">{{ channel.name }}</div>
+  <div class="channel-subcribe-count">{{ channel.subcribers }} subscribers</div>
+  <div style="align-items: center; justify-content: center; display: flex; margin-top: 8px;">
+    <div class="channel-subcribe" (click)="onClickSubcribe()">Subsribe</div>
+  </div>
+</div>

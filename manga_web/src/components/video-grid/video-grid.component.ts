@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { VideoLinkItem } from '../../models/video-link-item';
+import { IVideoLinkItem } from '../../models/video-link-item';
 import { VideoService } from 'src/services/video.service';
 
 @Component({
@@ -26,6 +26,6 @@ import { VideoService } from 'src/services/video.service';
 export class VideoGridComponent {
   @Input() isShowChannel: Boolean = true
   @Input() numOfColumn: number = 4
-  @Input() videoLinks: VideoLinkItem[] = [];
+  @Input() videoLinks: IVideoLinkItem[] = [];
   
 }

@@ -1,6 +1,6 @@
 import { IChannelModel } from './channel';
 
-export interface VideoLinkItem {
+export interface IVideoLinkItem {
   image: String;
   title: String;
   channel: IChannelModel;

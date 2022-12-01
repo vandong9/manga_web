@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { VideoLinkItem } from 'src/models/video-link-item';
+import { IVideoLinkItem } from 'src/models/video-link-item';
 import { VideoService } from 'src/services/video.service';
 
 @Component({
@@ -14,7 +14,7 @@ import { VideoService } from 'src/services/video.service';
   providers: [VideoService],
 })
 export class RelativeVideoComponent {
-  @Input() relativeVideos: VideoLinkItem[] = [];
+  @Input() relativeVideos: IVideoLinkItem[] = [];
   constructor(private videoService: VideoService) {
     videoService.getRelativeVideo().subscribe((videos) => {
       this.relativeVideos = this.relativeVideos.concat(videos);
@@ -44,5 +44,5 @@ export class RelativeVideoComponent {
   </div>`,
 })
 export class RelativeVideoCell {
-  @Input() relativeVideo!: VideoLinkItem;
+  @Input() relativeVideo!: IVideoLinkItem;
 }
