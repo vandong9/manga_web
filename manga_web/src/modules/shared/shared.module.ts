@@ -9,6 +9,7 @@ import { ChannelAvatarComponent } from 'src/components/channel-avatar/channel-av
 import { HeaderComponent } from 'src/components/header/header.component';
 import { LeftMenuComponent } from 'src/components/left-menu/left-menu.component';
 import { VideoGridComponent } from 'src/components/video-grid/video-grid.component';
+import { VideoHorizonListComponent } from 'src/components/video-horizon-list/video-horizon-list.component';
 
 @NgModule({
   imports: [CommonModule],
@@ -22,6 +23,7 @@ import { VideoGridComponent } from 'src/components/video-grid/video-grid.compone
     CardCommunityComponent,
     CardPlaylistComponent,
     CardChannelComponent,
+    VideoHorizonListComponent,
   ],
   exports: [
     LeftMenuComponent,
@@ -33,6 +35,7 @@ import { VideoGridComponent } from 'src/components/video-grid/video-grid.compone
     CardCommunityComponent,
     CardPlaylistComponent,
     CardChannelComponent,
+    VideoHorizonListComponent,
   ],
 })
 export class SharedModule {}

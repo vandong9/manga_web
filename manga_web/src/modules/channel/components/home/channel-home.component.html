@@ -17,10 +17,10 @@
       </div>
       <!-- display cate type video -->
       <div *ngIf="cate.type == 'video'">
-        <video-grid
+        <video-horizon-list
           [videoLinks]="getVideosForCateAtIndex(i)"
           [isShowChannel]="false"
-        ></video-grid>
+        ></video-horizon-list>
       </div>
 
       <!-- Display cate type playlist -->

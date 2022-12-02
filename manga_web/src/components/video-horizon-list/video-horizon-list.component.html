@@ -1,0 +1,68 @@
+<style>
+  .list-video {
+    /* display: flex; */
+    background: linear-gradient(
+      149deg,
+      rgb(247, 0, 255) 0%,
+      rgb(255, 145, 0) 100%
+    );
+    /* display: flex;
+    align-items: center;
+    justify-content: center; */
+    /* height: 100%; */
+  }
+
+  .slider {
+    width: 600px;
+    height: 400px;
+    /* text-align: center; */
+    border-radius: 20px;
+    overflow: hidden;
+    position: relative;
+    /* align-content: center; */
+  }
+
+  .slide a {
+    position: absolute;
+    top: 50%;
+    width: 35px;
+    height: 35px;
+    border: solid white;
+    border-width: 0 4px 4px 0;
+    padding: 3px;
+    box-sizing: border-box;
+
+    /* -ms-transform: translateY(-50%);
+  transform: translateY(-50%); */
+  }
+
+  a.slide__prev {
+    /* justify-content: center; */
+    
+    /* transform: rotate(135deg); */
+    /* -webkit-transform: rotate(135deg); */
+    left: 5%;
+  }
+
+  a.slide__next {
+    /* transform: rotate(-45deg); */
+    /* -webkit-transform: rotate(-45deg); */
+    right: 5%;
+  }
+</style>
+
+<div class="list-video">
+  <div class="slide">
+    <div style="display: flex">
+      <ng-template ngFor let-clip [ngForOf]="videoLinks" let-i="index">
+        <card-video
+          [videoLink]="clip"
+          [isShowChannel]="isShowChannel"
+        ></card-video>
+      </ng-template>
+    </div>
+
+    <a class="slide__prev" title="Prev"></a>
+    <a class="slide__next" title="Next"></a>
+  </div>
+</div>
