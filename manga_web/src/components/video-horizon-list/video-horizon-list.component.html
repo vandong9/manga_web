@@ -1,23 +1,18 @@
 <style>
   .list-video {
     /* display: flex; */
-    background: linear-gradient(
-      149deg,
-      rgb(247, 0, 255) 0%,
-      rgb(255, 145, 0) 100%
-    );
+    position: relative;
+
     /* display: flex;
     align-items: center;
     justify-content: center; */
     /* height: 100%; */
+    width: 100%;
   }
 
   .slider {
-    width: 600px;
-    height: 400px;
-    /* text-align: center; */
-    border-radius: 20px;
-    overflow: hidden;
+    display: block;
+    /* overflow: scroll; */
     position: relative;
     /* align-content: center; */
   }
@@ -25,35 +20,63 @@
   .slide a {
     position: absolute;
     top: 50%;
-    width: 35px;
-    height: 35px;
+    width: 30px;
+    height: 30px;
     border: solid white;
     border-width: 0 4px 4px 0;
-    padding: 3px;
     box-sizing: border-box;
-
-    /* -ms-transform: translateY(-50%);
-  transform: translateY(-50%); */
   }
 
   a.slide__prev {
-    /* justify-content: center; */
-    
-    /* transform: rotate(135deg); */
-    /* -webkit-transform: rotate(135deg); */
-    left: 5%;
+    justify-content: center;
+
+    transform: translateY(-50%) rotate(135deg);
+    -webkit-transform: translateY(-50%) rotate(135deg);
+    left: 5px;
   }
 
   a.slide__next {
-    /* transform: rotate(-45deg); */
-    /* -webkit-transform: rotate(-45deg); */
-    right: 5%;
+    transform: translateY(-50%) rotate(-45deg);
+    -webkit-transform: translateY(-50%) rotate(-45deg);
+    right: 5px;
+  }
+  .left-trans {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 80px;
+    background: linear-gradient(
+      149deg,
+      rgba(0, 0, 0, 1) 0%,
+      rgba(0, 0, 0, 0) 100%
+    );
+  }
+  .right-trans {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 80px;
+    background: linear-gradient(
+      149deg,
+      rgba(0, 0, 0, 1) 0%,
+      rgba(0, 0, 0, 0) 100%
+    );
   }
 </style>
 
 <div class="list-video">
   <div class="slide">
-    <div style="display: flex">
+    <div
+      #ItemContainer
+      style="
+        display: flex;
+        overflow-x: auto;
+        scroll-behavior: smooth;
+        width: 100%;
+      "
+    >
       <ng-template ngFor let-clip [ngForOf]="videoLinks" let-i="index">
         <card-video
           [videoLink]="clip"
@@ -61,8 +84,9 @@
         ></card-video>
       </ng-template>
     </div>
-
-    <a class="slide__prev" title="Prev"></a>
-    <a class="slide__next" title="Next"></a>
+    <div class="left-trans"></div>
+    <div class="right-trans"></div>
+    <a class="slide__prev" title="Prev" (click)="onClickLeft()"></a>
+    <a class="slide__next" title="Next" (click)="onClickRight()"></a>
   </div>
 </div>
