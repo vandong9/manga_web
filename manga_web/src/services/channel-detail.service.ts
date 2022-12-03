@@ -23,6 +23,19 @@ export class ChannelDetailService {
   allVideosLink = '';
   relateVideoLink = '';
 
+  getUserHomeData(channelID: String): Observable<Category[]> {
+    var observer = new Observable<Category[]>((subscriber) => {
+      this.http.get('assets/mock/home.json').subscribe((data) => {
+        let jsonString = JSON.stringify(data);
+        var categories: Array<Category> = JSON.parse(jsonString);
+        subscriber.next(categories);
+        subscriber.complete();
+      });
+    });
+
+    return observer;
+  }
+
   getDetailOfChannel(channelID: String): Observable<Category[]> {
     var observer = new Observable<Category[]>((subscriber) => {
       this.http.get('assets/mock/channel-detail.json').subscribe((data) => {

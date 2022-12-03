@@ -31,11 +31,6 @@
     height: 56px;
     padding: 0px;
   }
-  #body {
-    display: flex;
-    background: #181818;
-    color: white;
-  }
 
   #app {
     background: #181818;
@@ -97,7 +92,7 @@
     <div>
       <left-menu [haveChange]="toggle"></left-menu>
     </div>
-    <div style="overflow: scroll">
+    <div style="overflow: scroll; width: 100%">
       <img class="channel-banner" />
       <div class="channel-script-info">
         <img src="{{ channelModel.avatar }}" class="channel-avatar" />
@@ -122,17 +117,17 @@
       <!-- Detail of menu item -->
 
       <div>
-        <!-- Live tab content -->
+        <!-- home tab content -->
         <div [hidden]="currentSelectedMenuItemID != 'home'">
           <channel-home [channelID]="channelID??''"></channel-home>
         </div>
 
-        <!-- Live tab content -->
+        <!-- channel tab content -->
         <div [hidden]="currentSelectedMenuItemID != 'channels'">
           <channel-channels [channelID]="channelID??''"></channel-channels>
         </div>
 
-        <!-- Live tab content -->
+        <!-- Playlist tab content -->
         <div [hidden]="currentSelectedMenuItemID != 'playlist'">
           <channel-playlist></channel-playlist>
         </div>

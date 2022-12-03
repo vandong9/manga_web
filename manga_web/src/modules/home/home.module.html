@@ -31,10 +31,13 @@
     height: 56px;
     padding: 0px;
   }
-  #body {
-    display: flex;
-    background: #181818;
-    color: white;
+
+  .cate-title {
+    font-size: 1rem;
+    padding-bottom: 8px;
+  }
+  .cate-line {
+    border-bottom: 1px gray solid;
   }
 </style>
 
@@ -49,8 +52,55 @@
     <div>
       <left-menu [haveChange]="toggle"></left-menu>
     </div>
-    <div>
-      <video-grid [videoLinks]="videoLinks"></video-grid>
+    <div style="overflow: scroll">
+      <div style="max-width: 100%">
+        <ng-container *ngFor="let cate of categories; let i = index">
+          <div>
+            <div>
+              <div class="cate-title">{{ cate.name }}</div>
+              <div>{{ cate.description }}</div>
+            </div>
+            <!-- display cate type video -->
+            <div *ngIf="cate.type == 'video'">
+              <video-grid
+                [videoLinks]="getVideosForCateAtIndex(i)"
+                [isShowChannel]="false"
+              ></video-grid>
+            </div>
+
+            <!-- Display cate type playlist -->
+            <div *ngIf="cate.type == 'playlist'">
+              <div
+                class="mt-6 grid grid-cols-1 gap-y-10 gap-x-6 sm:grid-cols-1 lg:grid-cols-6 xl:gap-x-8"
+              >
+                <div *ngFor="let playlist of getPlaylistForCateAtIndex(i)">
+                  <div class="group relative">
+                    <card-playlist [playlistModel]="playlist"></card-playlist>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Display cate type short -->
+            <div *ngIf="cate.type == 'short'">
+              <div>Shorts</div>
+              <div
+                class="mt-6 grid grid-cols-1 gap-y-10 gap-x-6 sm:grid-cols-1 lg:grid-cols-6 xl:gap-x-8"
+              >
+                <ng-container *ngFor="let clip of getShortForCateAtIndex(i)">
+                  <div class="group relative">
+                    <card-short [videoLink]="clip"></card-short>
+                  </div>
+                </ng-container>
+              </div>
+            </div>
+
+            <div style="height: 8px"></div>
+            <div class="cate-line"></div>
+            <div style="height: 16px"></div>
+          </div>
+        </ng-container>
+      </div>
     </div>
   </div>
 </div>
