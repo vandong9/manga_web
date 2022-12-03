@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import { Router } from '@angular/router';
 import { IVideoLinkItem } from 'src/models/video-link-item';
 import { VideoService } from 'src/services/video.service';
 
@@ -24,25 +25,14 @@ export class RelativeVideoComponent {
 
 @Component({
   selector: 'relative-video-cell',
-  template: ` <div style="display: flex; width: 402px; padding: 8px;">
-    <img
-      src="{{ relativeVideo.image }}"
-      width="168px"
-      height="94px"
-      style="height: 94px;"
-    />
-    <div>
-      <div>
-      {{ relativeVideo.title }}
-      </div>
-      {{ relativeVideo.channel.name }}
-      <div style="display: flex;">
-        {{ relativeVideo.viewCount }}
-        {{ relativeVideo.uploadedTime }}
-      </div>
-    </div>
-  </div>`,
+  templateUrl: 'relative-video-cell.component.html',
 })
 export class RelativeVideoCell {
   @Input() relativeVideo!: IVideoLinkItem;
+
+  constructor(private router: Router) {}
+
+  onClickCell() {
+    this.router.navigate(['/video/', this.relativeVideo.id]);
+  }
 }

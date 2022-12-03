@@ -1,0 +1,26 @@
+<style>
+  .relative-cell {
+    display: flex;
+    width: 402px;
+    padding: 8px;
+    cursor: pointer;
+  }
+</style>
+<div class="relative-cell" (click)="onClickCell()">
+  <img
+    src="{{ relativeVideo.image }}"
+    width="168px"
+    height="94px"
+    style="height: 94px; border-radius: 10px"
+  />
+  <div>
+    <div>
+      {{ relativeVideo.title }}
+    </div>
+    {{ relativeVideo.channel.name }}
+    <div style="display: flex">
+      {{ relativeVideo.viewCount }}
+      {{ relativeVideo.uploadedTime }}
+    </div>
+  </div>
+</div>

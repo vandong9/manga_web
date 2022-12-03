@@ -7,7 +7,7 @@ import { IChannelModel } from 'src/models/channel';
   template: ` <img
     src="{{ channel?.avatar ?? '' }}"
     style="border-radius: 50%; width:
-    100%; height: 100%;" 
+    100%; height: 100%; cursor: pointer;"
     (click)="onClick()"
   />`,
 })
@@ -20,7 +20,6 @@ export class ChannelAvatarComponent {
     if (this.channel != null) {
       console.log(this.channel);
       this._router.navigate(['/channel', this.channel.id]);
-      //   this._router.navigateByUrl('/channnel/' + this.channel.id);
     }
   }
 }

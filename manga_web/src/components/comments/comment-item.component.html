@@ -1,17 +1,100 @@
-<div style="display: flex; padding: 8px;">
-    <img src="{{ comment.ownerAvatar }}" width="40px" height="40px">
-    <div>
-    <div style="display: flex;">
-        <div>{{ comment.ownerName }} </div>
-        <div>{{ comment.postDate }}</div>
+<style>
+  .thumb-icon {
+    width: 24px;
+    height: 24px;
+    fill: gray;
+  }
+  .thumb-text {
+    align-content: center;
+    align-items: center;
+    font-size: 0.8rem;
+    top: 25%;
+    position: relative;
+  }
+  .reply-button {
+    align-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 0.8rem;
+  }
+</style>
+
+<div style="display: flex; padding: 8px">
+  <div
+    style="
+      width: 40px;
+      min-width: 40px;
+      height: 40px;
+      min-height: 40px;
+      margin-right: 8px;
+    "
+  >
+    <channel-avatar [channel]="comment.channel"></channel-avatar>
+  </div>
+
+  <div>
+    <div style="display: flex">
+      <div>{{ comment.channel.name }}</div>
+      <div>{{ comment.postDate }}</div>
     </div>
     <div>{{ comment.comment }}</div>
-    </div>    
+    <div style="height: 8px"></div>
+    <div style="display: flex">
+      <div style="display: flex">
+        <div class="thumb-icon">
+          <svg
+            viewBox="0 0 24 24"
+            preserveAspectRatio="xMidYMid meet"
+            focusable="false"
+            class="style-scope yt-icon"
+            style="
+              pointer-events: none;
+              display: block;
+              width: 100%;
+              height: 100%;
+            "
+          >
+            <g class="style-scope yt-icon">
+              <path
+                [attr.d]="Constant.thumb_up_svg_d"
+                class="style-scope yt-icon"
+              ></path>
+            </g>
+          </svg>
+        </div>
+        <div class="thumb-text">{{ comment.likes }}</div>
+      </div>
+      <div style="width: 16px"></div>
+      <div class="thumb-icon thumb-text">
+        <svg
+          viewBox="0 0 24 24"
+          preserveAspectRatio="xMidYMid meet"
+          focusable="false"
+          class="style-scope yt-icon"
+          style="
+            pointer-events: none;
+            display: block;
+            width: 100%;
+            height: 100%;
+          "
+        >
+          <g class="style-scope yt-icon">
+            <path
+              [attr.d]="Constant.thumb_down_svg_d"
+              class="style-scope yt-icon"
+            ></path>
+          </g>
+        </svg>
+      </div>
+
+      <div style="width: 16px"></div>
+      <div class="reply-button">Reply</div>
+    </div>
+  </div>
 </div>
 
-<div style="padding-left: 24px;">
-<ng-container *ngFor="let reply of comment.replies">
+<div style="padding-left: 24px">
+  <ng-container *ngFor="let reply of comment.replies">
     <comment-item [comment]="reply"></comment-item>
-
-</ng-container>
+  </ng-container>
 </div>

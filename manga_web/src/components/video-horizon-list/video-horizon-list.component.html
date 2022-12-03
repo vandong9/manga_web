@@ -84,9 +84,19 @@
         ></card-video>
       </ng-template>
     </div>
-    <div class="left-trans"></div>
-    <div class="right-trans"></div>
-    <a class="slide__prev" title="Prev" (click)="onClickLeft()"></a>
-    <a class="slide__next" title="Next" (click)="onClickRight()"></a>
+    <div class="left-trans" [hidden]="hideBackButton"></div>
+    <div class="right-trans" [hidden]="hideNextButton"></div>
+    <a
+      class="slide__prev"
+      title="Prev"
+      (click)="onClickLeft()"
+      [hidden]="hideBackButton"
+    ></a>
+    <a
+      class="slide__next"
+      title="Next"
+      (click)="onClickRight()"
+      [hidden]="hideNextButton"
+    ></a>
   </div>
 </div>
