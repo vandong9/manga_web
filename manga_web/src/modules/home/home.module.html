@@ -53,6 +53,11 @@
       <left-menu [haveChange]="toggle"></left-menu>
     </div>
     <div style="overflow: scroll">
+      <div style="height: 8px"></div>
+      <div style="overflow: scroll; width: 100%">
+        <tag-horizon-list [tags]="tags"></tag-horizon-list>
+      </div>
+      <div style="height: 16px"></div>
       <div style="max-width: 100%">
         <ng-container *ngFor="let cate of categories; let i = index">
           <div>

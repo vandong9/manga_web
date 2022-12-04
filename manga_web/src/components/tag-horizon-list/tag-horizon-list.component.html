@@ -1,0 +1,112 @@
+<style>
+  .list-video {
+    /* display: flex; */
+    position: relative;
+
+    /* display: flex;
+    align-items: center;
+    justify-content: center; */
+    /* height: 100%; */
+    width: 100%;
+  }
+
+  .slider {
+    display: block;
+    /* overflow: scroll; */
+    position: relative;
+    /* align-content: center; */
+  }
+
+  .slide a {
+    position: absolute;
+    top: 50%;
+    width: 20px;
+    height: 20px;
+    border: solid white;
+    border-width: 0 4px 4px 0;
+    box-sizing: border-box;
+  }
+
+  a.slide__prev {
+    justify-content: center;
+
+    transform: translateY(-50%) rotate(135deg);
+    -webkit-transform: translateY(-50%) rotate(135deg);
+    left: 0px;
+  }
+
+  a.slide__next {
+    transform: translateY(-50%) rotate(-45deg);
+    -webkit-transform: translateY(-50%) rotate(-45deg);
+    right: 0px;
+  }
+  .left-trans {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 20px;
+    background: linear-gradient(
+      149deg,
+      rgba(0, 0, 0, 1) 0%,
+      rgba(0, 0, 0, 0) 100%
+    );
+  }
+  .right-trans {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 20px;
+    background: linear-gradient(
+      149deg,
+      rgba(0, 0, 0, 1) 0%,
+      rgba(0, 0, 0, 0) 100%
+    );
+  }
+  .tag-item {
+    position: relative;
+    padding: 2px 8px;
+    margin: auto 4px;
+    border-radius: 8px;
+    height: 40px;
+    background-color: gray;
+    font-size: 0.8rem;
+    display: flex;
+    align-items: center;
+  }
+</style>
+
+<div class="list-video">
+  <div class="slide">
+    <div
+      #ItemContainer
+      style="
+        display: flex;
+        overflow-x: auto;
+        scroll-behavior: smooth;
+        width: 100%;
+      "
+    >
+      <div style="height: 8px"></div>
+
+      <ng-template ngFor let-tag [ngForOf]="tags" let-i="index">
+        <div class="tag-item">{{ tag }}</div>
+      </ng-template>
+    </div>
+    <div class="left-trans" [hidden]="hideBackButton"></div>
+    <div class="right-trans" [hidden]="hideNextButton"></div>
+    <a
+      class="slide__prev"
+      title="Prev"
+      (click)="onClickLeft()"
+      [hidden]="hideBackButton"
+    ></a>
+    <a
+      class="slide__next"
+      title="Next"
+      (click)="onClickRight()"
+      [hidden]="hideNextButton"
+    ></a>
+  </div>
+</div>

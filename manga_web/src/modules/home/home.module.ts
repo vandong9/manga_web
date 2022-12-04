@@ -18,6 +18,24 @@ export class HomePageComponent {
   channelID: String = '';
   categories: Category[] = [];
   CategoryContentType = CategoryContentType;
+  tags: String[] = [
+    'All',
+    'Music',
+    'Live',
+    'Gaming',
+    'Computer programing',
+    'Speedrun',
+    'Manga',
+    'Human',
+    'Strategy game',
+    'Live',
+    'Gaming',
+    'Computer programing',
+    'Speedrun',
+    'Manga',
+    'Human',
+    'Strategy game',
+  ];
 
   listenToggleHambegerEmit(event: any) {
     console.log(event);

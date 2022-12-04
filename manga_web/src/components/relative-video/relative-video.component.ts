@@ -7,6 +7,9 @@ import { VideoService } from 'src/services/video.service';
   selector: 'relative-video',
   template: `
     <div style="width: 402px;">
+      <div>
+        <tag-horizon-list [tags]="tags"></tag-horizon-list>
+      </div>
       <ng-container *ngFor="let video of relativeVideos">
         <relative-video-cell [relativeVideo]="video"></relative-video-cell>
       </ng-container>
@@ -16,6 +19,18 @@ import { VideoService } from 'src/services/video.service';
 })
 export class RelativeVideoComponent {
   @Input() relativeVideos: IVideoLinkItem[] = [];
+  tags: String[] = [
+    'All',
+    'Music',
+    'Live',
+    'Gaming',
+    'Computer programing',
+    'Speedrun',
+    'Manga',
+    'Human',
+    'Strategy game',
+    'Live',
+  ];
   constructor(private videoService: VideoService) {
     videoService.getRelativeVideo().subscribe((videos) => {
       this.relativeVideos = this.relativeVideos.concat(videos);
