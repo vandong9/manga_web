@@ -6,18 +6,18 @@ import {
   OnDestroy,
   ViewChild,
 } from '@angular/core';
-import { IVideoLinkItem } from '../../models/video-link-item';
 import { VideoService } from 'src/services/video.service';
 import { fromEvent, Subject, takeUntil } from 'rxjs';
+import { IPlaylist } from 'src/models/playlist';
 
 @Component({
-  selector: 'video-horizon-list',
-  templateUrl: 'video-horizon-list.component.html',
+  selector: 'playlist-horizon-list',
+  templateUrl: 'playlist-horizon-list.component.html',
 })
-export class VideoHorizonListComponent implements AfterViewInit, OnDestroy {
+export class PlaylistHorizonListComponent implements AfterViewInit, OnDestroy {
   @Input() isShowChannel: Boolean = true;
   @Input() numOfColumn: number = 4;
-  @Input() videoLinks: IVideoLinkItem[] = [];
+  @Input() playlists: IPlaylist[] = [];
   destroy = new Subject();
 
   @ViewChild('ItemContainer') itemContainer?: ElementRef;

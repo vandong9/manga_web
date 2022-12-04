@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { LeftMenuMode } from 'src/components/left-menu/left-menu.component';
 import { IVideoLinkItem } from 'src/models/video-link-item';
 import { VideoService } from 'src/services/video.service';
 
@@ -7,7 +8,8 @@ import { VideoService } from 'src/services/video.service';
   templateUrl: 'play-video.page.html',
 })
 export class PlayVideoPage implements OnInit {
-  toggle: Boolean = false;
+  LeftMenuMode = LeftMenuMode
+  isShowLeftMenu: Boolean = false;
   relativeVideos: IVideoLinkItem[] = [];
   videoID: String = ""
 
@@ -22,7 +24,10 @@ export class PlayVideoPage implements OnInit {
   
   listenToggleHambegerEmit(event: any) {
     console.log(event);
-    this.toggle = !this.toggle;
+    this.isShowLeftMenu = !this.isShowLeftMenu;
   }
 
+  hideMenu() {
+    this.isShowLeftMenu = false
+  }
 }

@@ -8,6 +8,8 @@ import { CardVideoComponent } from 'src/components/card-video/card-video.compone
 import { ChannelAvatarComponent } from 'src/components/channel-avatar/channel-avatar.component';
 import { HeaderComponent } from 'src/components/header/header.component';
 import { LeftMenuComponent } from 'src/components/left-menu/left-menu.component';
+import { PlaylistHorizonListComponent } from 'src/components/playlist-horizon-list/playlist-horizon-list.component';
+import { ShortHorizonListComponent } from 'src/components/short-horizon-list/short-horizon-list.component';
 import { VideoGridComponent } from 'src/components/video-grid/video-grid.component';
 import { VideoHorizonListComponent } from 'src/components/video-horizon-list/video-horizon-list.component';
 
@@ -24,6 +26,8 @@ import { VideoHorizonListComponent } from 'src/components/video-horizon-list/vid
     CardPlaylistComponent,
     CardChannelComponent,
     VideoHorizonListComponent,
+    PlaylistHorizonListComponent,
+    ShortHorizonListComponent,
   ],
   exports: [
     LeftMenuComponent,
@@ -36,6 +40,8 @@ import { VideoHorizonListComponent } from 'src/components/video-horizon-list/vid
     CardPlaylistComponent,
     CardChannelComponent,
     VideoHorizonListComponent,
+    PlaylistHorizonListComponent,
+    ShortHorizonListComponent,
   ],
 })
 export class SharedModule {}

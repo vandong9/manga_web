@@ -41,6 +41,25 @@
     width: 30%;
     min-width: 300px;
   }
+  .left-menu-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: transparent;
+    z-index: 195;
+  }
+
+  .left-menu-container-background {
+    background-color: rgba(0, 0, 0, 0.7);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 199;
+  }
 </style>
 
 <div class="app">
@@ -61,5 +80,12 @@
     <div class="relative-video-section">
       <relative-video [relativeVideos]="relativeVideos"></relative-video>
     </div>
+  </div>
+</div>
+<div [hidden]="!isShowLeftMenu" class="left-menu-container">
+  <div class="left-menu-container-background" (click)="hideMenu()"></div>
+  <div style="background-color: black; position: relative; width: 240px; height: 100%; z-index: 200;">
+    <div style="height: 56px"></div>
+    <left-menu [currentLeftMenuMode]="LeftMenuMode.maximixe"></left-menu>
   </div>
 </div>

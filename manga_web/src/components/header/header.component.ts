@@ -1,5 +1,6 @@
 import { Component } from "@angular/core";
 import { EventEmitter, Output } from "@angular/core";
+import { Constant } from "src/common/constant";
 @Component({
     selector:'page-header',
     templateUrl:'header.component.html',
@@ -7,6 +8,7 @@ import { EventEmitter, Output } from "@angular/core";
 })
 
 class HeaderComponent {
+    Constant = Constant
     @Output() onClickHambegerEmitter: EventEmitter<any> = new EventEmitter();
     onClickHamberger() {
         this.onClickHambegerEmitter.emit(this)

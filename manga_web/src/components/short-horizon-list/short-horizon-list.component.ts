@@ -11,10 +11,10 @@ import { VideoService } from 'src/services/video.service';
 import { fromEvent, Subject, takeUntil } from 'rxjs';
 
 @Component({
-  selector: 'video-horizon-list',
-  templateUrl: 'video-horizon-list.component.html',
+  selector: 'short-horizon-list',
+  templateUrl: 'short-horizon-list.component.html',
 })
-export class VideoHorizonListComponent implements AfterViewInit, OnDestroy {
+export class ShortHorizonListComponent implements AfterViewInit, OnDestroy {
   @Input() isShowChannel: Boolean = true;
   @Input() numOfColumn: number = 4;
   @Input() videoLinks: IVideoLinkItem[] = [];
